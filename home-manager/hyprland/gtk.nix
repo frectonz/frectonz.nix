@@ -7,7 +7,7 @@ rec {
     enable = true;
     font = {
       name = "Fira Code";
-      size = 12;
+      size = 10;
     };
     iconTheme = {
       name = "Papirus";
