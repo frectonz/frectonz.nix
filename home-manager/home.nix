@@ -76,11 +76,15 @@
 
   programs.lsd.enable = true;
   programs.neovim.enable = true;
+  programs.vscode.enable = true;
 
   programs.mpv = {
     enable = true;
     scripts = [ pkgs.mpvScripts.mpris ];
   };
+
+  # Bluetooth
+  services.blueman-applet.enable = true;
 
   # Enable home-manager
   programs.home-manager.enable = true;
@@ -89,7 +93,7 @@
   programs.nix-index = {
     enable = true;
     enableFishIntegration = true;
-  }; 
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
