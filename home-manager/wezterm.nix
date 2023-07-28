@@ -12,6 +12,12 @@
         set_environment_variables = {
           TERM = 'wezterm',
         },
+	window_padding = {
+          left = '2cell',
+	  right = '2cell',
+	  top = '1cell',
+	  bottom = '1cell',
+	}
       }
     '';
   };

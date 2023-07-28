@@ -30,7 +30,7 @@ in
         mode = "dock";
         layer = "top";
         height = 32;
-        position = "top";
+        position = "bottom";
         modules-left = [
 	  "wlr/workspaces"
 	];
@@ -131,9 +131,9 @@ in
           format-icons = {
             "No player active" = "";
             "mpv" = "󰎁 ";
-            "firefox" = " ";
             "discord" = " 󰙯 ";
             "kdeconnect" = "󰄡 ";
+	    "chromium" = " ";
           };
           on-click = "${playerctld} shift";
           on-click-right = "${playerctld} unshift";
@@ -147,7 +147,7 @@ in
     };
 
     style = ''
-    window#waybar.top {
+    window#waybar {
       background-color: rgba(0, 0, 0, .3);
     }
 
@@ -155,11 +155,11 @@ in
       margin: 5;
       color: white;
       border-radius: 0;
-      border: 1px solid white;
+      border: none;
     }
 
     #workspaces button.active {
-      border: none;
+      border: 1px solid white;
       background-color: black;
     }
 
