@@ -14,6 +14,7 @@
     ./pass.nix
     ./starship.nix
 
+    ./mpv.nix
     ./wezterm.nix
     ./alacritty.nix
     ./zathura.nix
@@ -21,6 +22,7 @@
     ./chromium.nix
 
     ./hyprland
+    ./helix.nix
   ];
 
   nixpkgs = {
@@ -28,8 +30,6 @@
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
-
-
     ];
     # Configure your nixpkgs instance
     config = {
@@ -44,11 +44,11 @@
     homeDirectory = "/home/frectonz";
     packages = with pkgs; [
       # CLI
+      bat
       cowsay
       fortune
       lolcat
       ranger
-      bat
       lazygit
 
       # GUI
@@ -59,20 +59,14 @@
     ];
 
     sessionVariables = {
-      EDITOR   = "nvim";
-      VISUAL   = "nvim";
+      EDITOR   = "hx";
+      VISUAL   = "hx";
       TERMINAL = "alacritty";
     };
   };
 
   programs.lsd.enable = true;
-  programs.neovim.enable = true;
   programs.vscode.enable = true;
-
-  programs.mpv = {
-    enable = true;
-    scripts = [ pkgs.mpvScripts.mpris ];
-  };
 
   # Bluetooth
   services.blueman-applet.enable = true;

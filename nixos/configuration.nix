@@ -177,10 +177,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    llvmPackages_16.stdenv # LLVM toolchain including clang
-    clang_16
-  ];
+  environment.systemPackages = with pkgs; [];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.05";
