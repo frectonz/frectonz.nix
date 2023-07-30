@@ -4,14 +4,13 @@
     enable = true;
     shellAliases = {
       ls = "lsd --group-directories-first -al";
-      vim = "nvim";
       cp = "cp -i";
       mv = "mv -i";
       rm = "rm -i";
       cat = "bat";
     };
     shellAbbrs = {
-      e = "vim";
+      e = "hx";
       lg = "lazygit";
       addall   = "git add .";
       branches = "git branch";
