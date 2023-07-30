@@ -7,7 +7,7 @@
     settings = {
       format =
         let
-	  git = "($git_branch)($git_commit)($git_state)($git_status)";
+          git = "($git_branch)($git_commit)($git_state)($git_status)";
         in
         ''
           $username$hostname($cmd_duration)($nix_shell)$custom
@@ -43,16 +43,18 @@
       };
 
       custom = {
-        nix_inspect = let
-          excluded = [ "user-environment" "binutils-wrapper" "pciutils" ];
-        in {
-          disabled = false;
-          when = "test -z $IN_NIX_SHELL";
-          command = "${(lib.getExe pkgs.nix-inspect)} ${(lib.concatStringsSep " " excluded)}";
-          format = "[($output <- $symbol)]($style) ";
-          symbol = " ";
-          style = "bold blue";
-        };
+        nix_inspect =
+          let
+            excluded = [ "user-environment" "binutils-wrapper" "pciutils" ];
+          in
+          {
+            disabled = false;
+            when = "test -z $IN_NIX_SHELL";
+            command = "${(lib.getExe pkgs.nix-inspect)} ${(lib.concatStringsSep " " excluded)}";
+            format = "[($output <- $symbol)]($style) ";
+            symbol = " ";
+            style = "bold blue";
+          };
       };
     };
   };

@@ -22,7 +22,7 @@ in
   programs.waybar = {
     enable = true;
     package = (pkgs.waybar.overrideAttrs (oldAttrs: {
-       mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+      mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
     }));
 
     settings = {
@@ -32,40 +32,40 @@ in
         height = 32;
         position = "bottom";
         modules-left = [
-	  "wlr/workspaces"
-	];
+          "wlr/workspaces"
+        ];
 
-	"wlr/workspaces" = {
+        "wlr/workspaces" = {
           on-click = "activate";
         };
 
-	modules-right = [
-	  "custom/player"
-	  "custom/currentplayer"
-	  "backlight"
-	  "pulseaudio"
-	  "network"
-	  "battery"
-	  "cpu"
-	  "memory"
-	  "clock"
-	  "tray"
-	];
+        modules-right = [
+          "custom/player"
+          "custom/currentplayer"
+          "backlight"
+          "pulseaudio"
+          "network"
+          "battery"
+          "cpu"
+          "memory"
+          "clock"
+          "tray"
+        ];
 
-	clock = {
+        clock = {
           format = "{:%d/%m/%Y %H:%M}";
         };
 
-	memory = {
+        memory = {
           format = "󰍛  {}%";
           interval = 5;
         };
 
-	cpu = {
+        cpu = {
           format = "   {usage}%";
         };
 
-	battery = {
+        battery = {
           bat = "BAT0";
           interval = 10;
           format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
@@ -85,7 +85,7 @@ in
             Down: {bandwidthDownBits}'';
         };
 
-	pulseaudio = {
+        pulseaudio = {
           format = "{icon}  {volume}%";
           format-muted = "   0%";
           format-icons = {
@@ -110,7 +110,7 @@ in
           on-click = "${playerctl} play-pause";
         };
 
-	"custom/currentplayer" = {
+        "custom/currentplayer" = {
           interval = 1;
           return-type = "json";
           exec = jsonOutput "currentplayer" {
@@ -133,63 +133,63 @@ in
             "mpv" = "󰎁 ";
             "discord" = " 󰙯 ";
             "kdeconnect" = "󰄡 ";
-	    "chromium" = " ";
+            "chromium" = " ";
           };
           on-click = "${playerctld} shift";
           on-click-right = "${playerctld} unshift";
         };
 
-	backlight = {
+        backlight = {
           format = "{icon}";
-          format-icons = [ "" "" "" "" "" "" "" "" ""];
+          format-icons = [ "" "" "" "" "" "" "" "" "" ];
         };
       };
     };
 
     style = ''
-    window#waybar {
-      background-color: rgba(0, 0, 0, .3);
-    }
+      window#waybar {
+        background-color: rgba(0, 0, 0, .3);
+      }
 
-    #workspaces button {
-      margin: 5;
-      color: white;
-      border-radius: 0;
-      border: none;
-    }
+      #workspaces button {
+        margin: 5;
+        color: white;
+        border-radius: 0;
+        border: none;
+      }
 
-    #workspaces button.active {
-      border: 1px solid white;
-      background-color: black;
-    }
+      #workspaces button.active {
+        border: 1px solid white;
+        background-color: black;
+      }
 
-    #workspaces button:hover {
-      color: black;
-    }
+      #workspaces button:hover {
+        color: black;
+      }
 
-    #clock,
-    #memory,
-    #cpu,
-    #battery,
-    #network,
-    #pulseaudio,
-    #backlight,
-    #custom-currentplayer {
-      padding: 0 15;
-      color: white;
-      border-radius: 0;
-      border-left: 1px solid white;
-    }
+      #clock,
+      #memory,
+      #cpu,
+      #battery,
+      #network,
+      #pulseaudio,
+      #backlight,
+      #custom-currentplayer {
+        padding: 0 15;
+        color: white;
+        border-radius: 0;
+        border-left: 1px solid white;
+      }
 
-    #custom-player {
-      padding: 0 15;
-      color: white;
-    }
+      #custom-player {
+        padding: 0 15;
+        color: white;
+      }
 
-    #tray {
-      padding: 0 15;
-      border-left: 1px solid white;
-    }
+      #tray {
+        padding: 0 15;
+        border-left: 1px solid white;
+      }
     '';
   };
 }

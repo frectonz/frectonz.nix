@@ -5,7 +5,7 @@
     settings = {
       window.padding = {
         x = 20;
-	y = 20;
+        y = 20;
       };
       font =
         let
@@ -13,8 +13,8 @@
         in
         {
           normal.family = font;
-	  bold.family   = font;
-	  italic.family = font;
+          bold.family = font;
+          italic.family = font;
         };
     };
   };

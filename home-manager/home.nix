@@ -59,8 +59,8 @@
     ];
 
     sessionVariables = {
-      EDITOR   = "hx";
-      VISUAL   = "hx";
+      EDITOR = "hx";
+      VISUAL = "hx";
       TERMINAL = "alacritty";
     };
   };

@@ -12,25 +12,25 @@
     shellAbbrs = {
       e = "hx";
       lg = "lazygit";
-      addall   = "git add .";
+      addall = "git add .";
       branches = "git branch";
-      commit   = "git commit -m";
-      remotes  = "git remote";
-      clone    = "git clone";
-      pull     = "git pull origin";
-      push     = "git push origin";
-      pushup   = "git push -U origin main";
-      stat     = "git status";
+      commit = "git commit -m";
+      remotes = "git remote";
+      clone = "git clone";
+      pull = "git pull origin";
+      push = "git push origin";
+      pushup = "git push -U origin main";
+      stat = "git status";
     };
     functions = {
       fish_greeting = "";
       mkcd =
         ''
-        function mkcd
-	  mkdir $argv
-	  cd $argv
-	end
-	'';
+                  function mkcd
+          	  mkdir $argv
+          	  cd $argv
+          	end
+          	'';
     };
   };
 }
