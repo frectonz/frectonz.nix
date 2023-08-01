@@ -34,6 +34,8 @@
   };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.initrd.kernelModules = [ "nvidia" ];
+  boot.extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
 
   # Define your hostname.
   networking.hostName = "newton";
@@ -155,7 +157,7 @@
 
 
   # Fonts
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
 
     noto-fonts
