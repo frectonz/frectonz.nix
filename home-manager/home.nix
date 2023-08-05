@@ -55,6 +55,7 @@
       obsidian
       telegram-desktop
 
+      transmission-gtk
       networkmanagerapplet
     ];
 
