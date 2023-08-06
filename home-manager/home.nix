@@ -23,6 +23,8 @@
 
     ./hyprland
     ./helix.nix
+
+    ./obs.nix
   ];
 
   nixpkgs = {
