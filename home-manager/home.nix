@@ -13,6 +13,7 @@
     ./fish.nix
     ./pass.nix
     ./starship.nix
+    ./zellij.nix
 
     ./mpv.nix
     ./wezterm.nix
