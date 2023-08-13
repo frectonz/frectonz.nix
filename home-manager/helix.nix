@@ -3,7 +3,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = "tokyonight_storm";
+      theme = "ayu_evolve";
       editor = {
         mouse = false;
         line-number = "relative";
