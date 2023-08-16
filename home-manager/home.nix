@@ -58,6 +58,8 @@
       obsidian
       telegram-desktop
 
+      nyxt
+
       transmission-gtk
       networkmanagerapplet
     ];
