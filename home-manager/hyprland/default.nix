@@ -31,7 +31,7 @@
     enable = true;
     extraConfig = import ./config.nix;
 
-    nvidiaPatches = true;
+    # nvidiaPatches = true;
     xwayland.enable = true;
     recommendedEnvironment = true;
   };

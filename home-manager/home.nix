@@ -22,7 +22,7 @@
     ./discord.nix
     ./chromium.nix
 
-    ./hyprland
+    # ./hyprland
     ./helix.nix
 
     ./obs.nix
@@ -62,6 +62,12 @@
 
       transmission-gtk
       networkmanagerapplet
+
+      libreoffice-qt
+      hunspell
+
+      vlc
+      slack
     ];
 
     sessionVariables = {
@@ -69,6 +75,10 @@
       VISUAL = "hx";
       TERMINAL = "alacritty";
     };
+  };
+
+  xsession.windowManager.i3 = {
+    enable = true;
   };
 
   programs.lsd.enable = true;
