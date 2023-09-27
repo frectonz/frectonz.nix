@@ -19,22 +19,5 @@
         indent-guides.render = true;
       };
     };
-
-    languages = {
-      language = [{
-        name = "typescript";
-        file-types = [ "ts" "js" ];
-        language-server = {
-          command = "deno";
-          args = [ "lsp" ];
-        };
-        config = {
-          deno = {
-            enable = true;
-            lint = true;
-          };
-        };
-      }];
-    };
   };
 }

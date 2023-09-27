@@ -68,6 +68,8 @@
 
       vlc
       slack
+
+      gnome.gnome-tweaks
     ];
 
     sessionVariables = {
@@ -77,7 +79,16 @@
     };
   };
 
-  xsession.windowManager.i3 = {
+
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "Adwaita Icon Theme";
+      package = pkgs.gnome.adwaita-icon-theme;
+    };
+  };
+
+  services.xsettingsd = {
     enable = true;
   };
 
