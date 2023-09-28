@@ -1,5 +1,5 @@
 {
-  description = "frectonz's nixos config";
+  description = "frectonz's nix config";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -9,18 +9,22 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland";
-    hyprland-contrib = {
-      url = "github:hyprwm/contrib";
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs:
+  outputs =
+    { self
+    , nixpkgs
+    , home-manager
+    , ...
+    } @ inputs:
     let
       inherit (self) outputs;
-      lib = nixpkgs.lib // home-manager.lib;
       systems = [ "x86_64-linux" ];
+      lib = nixpkgs.lib // home-manager.lib;
       forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
       pkgsFor = lib.genAttrs systems (system: import nixpkgs {
         inherit system;
@@ -28,26 +32,25 @@
       });
     in
     {
+      packages = forEachSystem (pkgs: import ./pkgs { inherit pkgs; });
+      formatter = forEachSystem (pkgs: pkgs.nixpkgs-fmt);
+
       overlays = import ./overlays { inherit inputs; };
       nixosModules = import ./modules/nixos;
       homeManagerModules = import ./modules/home-manager;
 
-      packages = forEachSystem (pkgs: import ./pkgs { inherit pkgs; });
-      devShells = forEachSystem (pkgs: import ./shell.nix { inherit pkgs; });
-      formatter = forEachSystem (pkgs: pkgs.nixpkgs-fmt);
-
       nixosConfigurations = {
-        newton = lib.nixosSystem {
+        newton = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [ ./hosts/newton ];
+          modules = [ ./nixos ];
         };
       };
 
       homeConfigurations = {
-        "frectonz@newton" = lib.homeManagerConfiguration {
+        "frectonz@newton" = home-manager.lib.homeManagerConfiguration {
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./home-manager/home.nix ];
+          modules = [ ./home ];
         };
       };
     };

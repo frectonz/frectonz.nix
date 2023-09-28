@@ -1,8 +1,8 @@
 { pkgs, config, lib, ... }:
 let
   pinentry = {
-    packages = [ pkgs.pinentry-curses ];
-    name = "curses";
+    packages = [ pkgs.pinentry-gnome pkgs.gcr ];
+    name = "gnome3";
   };
 in
 {

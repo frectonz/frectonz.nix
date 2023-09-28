@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  programs.obs-studio = {
+  programs.gh = {
     enable = true;
   };
 }

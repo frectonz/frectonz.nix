@@ -23,42 +23,24 @@
     "hyprland": {
       "inputs": {
         "hyprland-protocols": "hyprland-protocols",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "systems": "systems",
         "wlroots": "wlroots",
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1695650428,
-        "narHash": "sha256-gAUMixbeGqRjmh1IK3N6ffEcLiG5NxQNvxBjTVbpbFA=",
+        "lastModified": 1695840570,
+        "narHash": "sha256-Lm3aaK/rLt+OPtUJP1ZUVmsK5+cjfl+0EHoIT3zBM0I=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "ffacd2efd1ca7fdf364a519c9d8d8644da28412b",
+        "rev": "6d7dc70f663891ef39dcfb8ba8e5ff643b4d9ed8",
         "type": "github"
       },
       "original": {
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "type": "github"
-      }
-    },
-    "hyprland-contrib": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1695455081,
-        "narHash": "sha256-AtAMze2J5Maol28OLQoCFgppRWEy06Mn9RhduXNmhiI=",
-        "owner": "hyprwm",
-        "repo": "contrib",
-        "rev": "33663f663e07b4ca52c9165f74e3d793f08b15e7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hyprwm",
-        "repo": "contrib",
         "type": "github"
       }
     },
@@ -89,22 +71,6 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1694767346,
-        "narHash": "sha256-5uH27SiVFUwsTsqC5rs3kS7pBoNhtoy9QfTP9BmknGk=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "ace5093e36ab1e95cb9463863491bee90d5a4183",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
         "lastModified": 1695644571,
         "narHash": "sha256-asS9dCCdlt1lPq0DLwkVBbVoEKuEuz+Zi3DG7pR/RxA=",
         "owner": "nixos",
@@ -123,8 +89,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "hyprland": "hyprland",
-        "hyprland-contrib": "hyprland-contrib",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs"
       }
     },
     "systems": {

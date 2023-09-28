@@ -8,9 +8,10 @@
       mv = "mv -i";
       rm = "rm -i";
       cat = "bat";
+      hm = "home-manger";
+      nr = "sudo nixos-rebuild";
     };
     shellAbbrs = {
-      e = "hx";
       lg = "lazygit";
       addall = "git add .";
       branches = "git branch";
@@ -24,13 +25,8 @@
     };
     functions = {
       fish_greeting = "";
-      mkcd =
-        ''
-                  function mkcd
-          	  mkdir $argv
-          	  cd $argv
-          	end
-          	'';
     };
   };
+
+  home.packages = with pkgs; [ bat lazygit lsd ];
 }
