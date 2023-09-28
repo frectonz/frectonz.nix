@@ -9,12 +9,13 @@
     ./gh.nix
     ./gpg.nix
     ./git.nix
-    ./mpv.nix
     ./pass.nix
     ./fish.nix
     ./helix.nix
-    ./browser.nix
     ./starship.nix
+
+    ./players.nix
+    ./browsers.nix
     ./terminals.nix
   ];
 
