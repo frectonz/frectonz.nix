@@ -33,6 +33,10 @@
   home = {
     username = "frectonz";
     homeDirectory = "/home/frectonz";
+    packages = with pkgs; [
+      obsidian
+      telegram-desktop
+    ];
   };
 
   programs.home-manager.enable = true;
