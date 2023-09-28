@@ -20,6 +20,7 @@
   };
 
   environment.systemPackages = with pkgs; [ wl-clipboard mako libnotify swww wofi dmenu-wayland ];
+  programs.light.enable = true;
 
   xdg.portal.enable = true;
   xdg.portal.extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];

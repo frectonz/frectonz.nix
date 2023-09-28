@@ -63,7 +63,7 @@
       isNormalUser = true;
       shell = pkgs.fish;
       description = "frectonz";
-      extraGroups = [ "networkmanager" "wheel" "video" ];
+      extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
     };
   };
 
