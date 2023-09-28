@@ -14,6 +14,7 @@
     ./helix.nix
     ./starship.nix
 
+    ./games.nix
     ./players.nix
     ./browsers.nix
     ./terminals.nix
