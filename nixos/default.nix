@@ -6,9 +6,9 @@
 , ...
 }: {
   imports = [
-    ./hardware-configuration.nix
-    ./hyprland.nix
     ./sound.nix
+    ./hardware.nix
+    ./hyprland.nix
   ];
 
   nixpkgs = {
