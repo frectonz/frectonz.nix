@@ -37,11 +37,13 @@
     username = "frectonz";
     homeDirectory = "/home/frectonz";
     packages = with pkgs; [
+      bottom
       ranger
       obsidian
       telegram-desktop
     ];
   };
+  programs.htop.enable = true;
 
   programs.home-manager.enable = true;
 
