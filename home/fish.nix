@@ -28,5 +28,5 @@
     };
   };
 
-  home.packages = with pkgs; [ bat lazygit lsd ];
+  home.packages = with pkgs; [ bat lazygit lsd ripgrep ];
 }

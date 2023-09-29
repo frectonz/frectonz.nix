@@ -23,4 +23,8 @@
       };
     };
   };
+
+  home.sessionVariables = {
+    EDITOR = "hx";
+  };
 }

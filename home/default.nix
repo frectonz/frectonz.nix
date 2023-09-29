@@ -36,6 +36,7 @@
     username = "frectonz";
     homeDirectory = "/home/frectonz";
     packages = with pkgs; [
+      ranger
       obsidian
       telegram-desktop
     ];
