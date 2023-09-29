@@ -12,6 +12,7 @@
     ./pass.nix
     ./fish.nix
     ./helix.nix
+    ./zathura.nix
     ./starship.nix
 
     ./games.nix
