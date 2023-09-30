@@ -10,6 +10,7 @@
       cat = "bat";
       hm = "home-manger";
       nr = "sudo nixos-rebuild";
+      df = "duf";
     };
     shellAbbrs = {
       lg = "lazygit";
@@ -28,5 +29,5 @@
     };
   };
 
-  home.packages = with pkgs; [ bat lazygit lsd ripgrep ];
+  home.packages = with pkgs; [ bat lazygit lsd ripgrep duf ];
 }
