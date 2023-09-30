@@ -40,6 +40,7 @@
       bottom
       ranger
       obsidian
+      transmission-gtk
       telegram-desktop
     ];
   };
