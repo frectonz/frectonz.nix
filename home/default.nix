@@ -40,6 +40,7 @@
       bottom
       ranger
       obsidian
+      cool-retro-term
       transmission-gtk
       telegram-desktop
     ];
