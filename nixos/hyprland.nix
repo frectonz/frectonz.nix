@@ -19,7 +19,18 @@
     nvidia.modesetting.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [ wl-clipboard mako libnotify swww wofi dmenu-wayland ];
+  environment.systemPackages = with pkgs; [
+    wl-clipboard
+
+    mako
+    libnotify
+
+    swww
+    wofi
+    dmenu-wayland
+    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+  ];
+
   programs.light.enable = true;
 
   xdg.portal.enable = true;
