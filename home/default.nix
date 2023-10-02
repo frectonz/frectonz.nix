@@ -40,12 +40,12 @@
       bottom
       ranger
       obsidian
+      neofetch
+      processing
       libreoffice
       cool-retro-term
       transmission-gtk
       telegram-desktop
-
-      processing
     ];
   };
   programs.htop.enable = true;
