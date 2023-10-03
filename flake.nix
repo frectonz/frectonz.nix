@@ -18,6 +18,11 @@
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    mekuteriya = {
+      url = "github:frectonz/mek-ut-er-ya";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
