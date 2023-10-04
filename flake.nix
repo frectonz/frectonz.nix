@@ -23,6 +23,11 @@
       url = "github:frectonz/mek-ut-er-ya";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    tuime = {
+      url = "github:nate-sys/tuime";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

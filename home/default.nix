@@ -46,6 +46,8 @@
       cool-retro-term
       transmission-gtk
       telegram-desktop
+
+      inputs.tuime.defaultPackage.${pkgs.system}
       inputs.mekuteriya.packages.${pkgs.system}.bin
     ];
   };
