@@ -37,6 +37,7 @@
     username = "frectonz";
     homeDirectory = "/home/frectonz";
     packages = with pkgs; [
+      zip
       bottom
       ranger
       obsidian
