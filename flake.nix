@@ -28,6 +28,11 @@
       url = "github:nate-sys/tuime";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    lobste-rs = {
+      url = "github:frectonz/lobste-rs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
