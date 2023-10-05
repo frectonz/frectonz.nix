@@ -38,6 +38,8 @@
     homeDirectory = "/home/frectonz";
     packages = with pkgs; [
       zip
+      unzip
+
       bottom
       ranger
       obsidian

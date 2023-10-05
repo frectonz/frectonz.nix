@@ -69,6 +69,20 @@
 
   programs.fish.enable = true;
 
+  fonts = {
+    packages = with pkgs; [
+      noto-fonts
+      noto-fonts-emoji
+      (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    ];
+    enableDefaultFonts = true;
+    fontconfig = {
+      defaultFonts = {
+        monospace = "Fira Code Nerd Font";
+      };
+    };
+  };
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.05";
 }
