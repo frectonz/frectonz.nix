@@ -33,6 +33,11 @@
       url = "github:frectonz/lobste-rs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    senamirmir = {
+      url = "github:frectonz/senamirmir-nixified";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

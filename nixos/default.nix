@@ -74,11 +74,12 @@
       noto-fonts
       noto-fonts-emoji
       (nerdfonts.override { fonts = [ "FiraCode" ]; })
+
+      inputs.senamirmir.packages.${pkgs.system}.default
     ];
-    enableDefaultFonts = true;
     fontconfig = {
       defaultFonts = {
-        monospace = "Fira Code Nerd Font";
+        monospace = ["Fira Code Nerd Font"];
       };
     };
   };
