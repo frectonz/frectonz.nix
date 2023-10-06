@@ -6,6 +6,8 @@
 , ...
 }: {
   imports = [
+    ./gtk.nix
+
     ./gh.nix
     ./gpg.nix
     ./git.nix
