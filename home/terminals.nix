@@ -18,8 +18,8 @@
     enable = true;
     settings = {
       window.padding = {
-        x = 5;
-        y = 5;
+        x = 8;
+        y = 8;
       };
     };
   };

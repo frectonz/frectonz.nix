@@ -5,6 +5,7 @@
   programs.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
     enableNvidiaPatches = true;
     xwayland.enable = true;
   };
@@ -33,8 +34,10 @@
 
   programs.light.enable = true;
 
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
+  };
 
   programs.thunar = {
     enable = true;

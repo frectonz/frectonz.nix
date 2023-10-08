@@ -9,14 +9,14 @@
 
   home = {
     sessionVariables = {
-      BROWSER = "brave";
+      BROWSER = "firefox";
     };
   };
 
   xdg.mimeApps.defaultApplications = {
-    "text/html" = [ "brave.desktop" ];
-    "text/xml" = [ "brave.desktop" ];
-    "x-scheme-handler/http" = [ "brave.desktop" ];
-    "x-scheme-handler/https" = [ "brave.desktop" ];
+    "text/html" = [ "firefox.desktop" ];
+    "text/xml" = [ "firefox.desktop" ];
+    "x-scheme-handler/http" = [ "firefox.desktop" ];
+    "x-scheme-handler/https" = [ "firefox.desktop" ];
   };
 }

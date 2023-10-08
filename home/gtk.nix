@@ -6,7 +6,7 @@
     cursorTheme = {
       name = "Vanilla-DMZ";
       package = pkgs.vanilla-dmz;
-      size = 20;
+      size = 30;
     };
 
     iconTheme = {
