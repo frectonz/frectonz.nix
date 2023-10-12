@@ -23,6 +23,8 @@
       push = "git push origin";
       pushup = "git push -U origin main";
       stat = "git status";
+
+      dev = "nix develop -c fish";
     };
     functions = {
       fish_greeting = "";

@@ -39,6 +39,8 @@
     username = "frectonz";
     homeDirectory = "/home/frectonz";
     packages = with pkgs; [
+      nil
+
       zip
       unzip
 
@@ -51,6 +53,9 @@
       cool-retro-term
       transmission-gtk
       telegram-desktop
+
+      slack
+      discord
 
       inputs.tuime.defaultPackage.${pkgs.system}
       inputs.lobste-rs.packages.${pkgs.system}.bin

@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   programs.firefox.enable = true;
 
-  home.packages = with pkgs; [ nil brave ];
+  home.packages = with pkgs; [ brave speechd ];
 
   programs.chromium = {
     enable = true;
