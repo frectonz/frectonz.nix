@@ -39,6 +39,7 @@
     username = "frectonz";
     homeDirectory = "/home/frectonz";
     packages = with pkgs; [
+      w
       nil
 
       zip
