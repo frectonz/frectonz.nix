@@ -1,5 +1,5 @@
 { pkgs }: {
-  w = pkgs.writeShellScriptBin "w" ''
-    cd $(find ~/workspace -maxdepth 1 -type d | ${pkgs.fzf}/bin/fzf)
+  workspace = pkgs.writeShellScriptBin "workspace" ''
+    find ~/workspace -maxdepth 1 -type d | ${pkgs.fzf}/bin/fzf
   '';
 }
