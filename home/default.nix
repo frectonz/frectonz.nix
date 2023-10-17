@@ -6,6 +6,8 @@
 , ...
 }: {
   imports = [
+    ./nvim.nix
+
     ./gtk.nix
 
     ./gh.nix
