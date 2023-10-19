@@ -23,6 +23,9 @@
       };
 
       font.size = 12.0;
+      font.bold.family = "Fira Code Nerd Font";
+      font.italic.family = "Fira Code Nerd Font";
+      font.normal.family = "Fira Code Nerd Font";
 
       # Colors (Ayu Dark)
       colors = {
