@@ -46,6 +46,7 @@
       zip
       unzip
 
+      timer
       bottom
       ranger
       obsidian
