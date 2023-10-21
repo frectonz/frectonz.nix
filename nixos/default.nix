@@ -63,11 +63,14 @@
       isNormalUser = true;
       shell = pkgs.fish;
       description = "frectonz";
-      extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
+      extraGroups = [ "networkmanager" "wheel" "video" "audio" "wireshark" ];
     };
   };
 
   programs.fish.enable = true;
+  programs.wireshark.enable = true;
+
+  environment.systemPackages = with pkgs; [ wireshark ];
 
   fonts = {
     packages = with pkgs; [
