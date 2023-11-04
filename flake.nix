@@ -34,6 +34,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    lithium = {
+      url = "github:frectonz/lithium";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     senamirmir = {
       url = "github:frectonz/senamirmir-nixified";
       inputs.nixpkgs.follows = "nixpkgs";
