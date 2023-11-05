@@ -379,6 +379,22 @@
         "type": "github"
       }
     },
+    "nixos": {
+      "locked": {
+        "lastModified": 1698924604,
+        "narHash": "sha256-GCFbkl2tj8fEZBZCw3Tc0AkGo0v+YrQlohhEGJ/X4s0=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "fa804edfb7869c9fb230e174182a8a1a7e512c40",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1698611440,
@@ -417,6 +433,7 @@
         "lithium": "lithium",
         "lobste-rs": "lobste-rs",
         "mekuteriya": "mekuteriya",
+        "nixos": "nixos",
         "nixpkgs": "nixpkgs",
         "senamirmir": "senamirmir",
         "tuime": "tuime"
