@@ -13,6 +13,7 @@
       df = "duf";
       w = "cd $(workspace)";
       code = "code --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto";
+      nix-shell = "nix-shell --command fish";
     };
     shellAbbrs = {
       lg = "lazygit";
