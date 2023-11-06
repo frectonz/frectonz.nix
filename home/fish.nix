@@ -12,6 +12,7 @@
       nr = "sudo nixos-rebuild";
       df = "duf";
       w = "cd $(workspace)";
+      code = "code --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto";
     };
     shellAbbrs = {
       lg = "lazygit";

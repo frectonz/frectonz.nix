@@ -39,6 +39,8 @@
     username = "frectonz";
     homeDirectory = "/home/frectonz";
     packages = with pkgs; [
+      vscode
+
       nil
 
       zip
