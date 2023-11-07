@@ -65,6 +65,7 @@
       inputs.lobste-rs.packages.${pkgs.system}.bin
       inputs.mekuteriya.packages.${pkgs.system}.bin
       inputs.lithium.packages.${pkgs.system}.default
+      inputs.license-gen.packages.${pkgs.system}.default
     ];
   };
   programs.htop.enable = true;

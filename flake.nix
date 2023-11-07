@@ -40,6 +40,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    license-gen = {
+      url = "github:frectonz/license-gen";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     senamirmir = {
       url = "github:frectonz/senamirmir-nixified";
       inputs.nixpkgs.follows = "nixpkgs";
