@@ -28,6 +28,7 @@
 
     swww
     wofi
+    xdg-utils
     dmenu-wayland
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
   ];
