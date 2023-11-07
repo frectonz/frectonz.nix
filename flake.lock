@@ -366,11 +366,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1699190854,
-        "narHash": "sha256-1vSWrWH/NbuoMqBe1P7jEq98G7hO+L8F6jchGPHDtt0=",
+        "lastModified": 1699350295,
+        "narHash": "sha256-9LySy7DStYaRLBOAiYVboj1rfz7kUdtOnsIRum/qbp0=",
         "owner": "frectonz",
         "repo": "license-gen",
-        "rev": "63177258ba0dc093052a6d7a6b9ea0c2dcfc64c6",
+        "rev": "9c36f3160dec01615ac2a93a48a3d95419ee9235",
         "type": "github"
       },
       "original": {
@@ -484,11 +484,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1698611440,
-        "narHash": "sha256-jPjHjrerhYDy3q9+s5EAsuhyhuknNfowY6yt6pjn9pc=",
+        "lastModified": 1699099776,
+        "narHash": "sha256-X09iKJ27mGsGambGfkKzqvw5esP1L/Rf8H3u3fCqIiU=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "0cbe9f69c234a7700596e943bfae7ef27a31b735",
+        "rev": "85f1ba3e51676fa8cc604a3d863d729026a6b8eb",
         "type": "github"
       },
       "original": {
