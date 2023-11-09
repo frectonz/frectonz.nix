@@ -66,6 +66,7 @@
       inputs.mekuteriya.packages.${pkgs.system}.bin
       inputs.battop.packages.${pkgs.system}.default
       inputs.lithium.packages.${pkgs.system}.default
+      inputs.birru_cli.packages.${pkgs.system}.birru
       inputs.license-gen.packages.${pkgs.system}.default
     ];
   };

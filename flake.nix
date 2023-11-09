@@ -50,6 +50,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    birru_cli = {
+      url = "github:frectonz/birru_cli";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     senamirmir = {
       url = "github:frectonz/senamirmir-nixified";
       inputs.nixpkgs.follows = "nixpkgs";
