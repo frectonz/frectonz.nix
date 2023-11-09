@@ -45,6 +45,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    battop = {
+      url = "github:frectonz/rust-battop";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     senamirmir = {
       url = "github:frectonz/senamirmir-nixified";
       inputs.nixpkgs.follows = "nixpkgs";

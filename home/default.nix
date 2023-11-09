@@ -64,6 +64,7 @@
       inputs.tuime.defaultPackage.${pkgs.system}
       inputs.lobste-rs.packages.${pkgs.system}.bin
       inputs.mekuteriya.packages.${pkgs.system}.bin
+      inputs.battop.packages.${pkgs.system}.default
       inputs.lithium.packages.${pkgs.system}.default
       inputs.license-gen.packages.${pkgs.system}.default
     ];
