@@ -68,6 +68,7 @@
       inputs.battop.packages.${pkgs.system}.default
       inputs.lithium.packages.${pkgs.system}.default
       inputs.birru_cli.packages.${pkgs.system}.birru
+      inputs.watchbox.packages.${pkgs.system}.default
       inputs.license-gen.packages.${pkgs.system}.default
     ];
   };

@@ -55,6 +55,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    watchbox = {
+      url = "github:frectonz/watchbox";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     senamirmir = {
       url = "github:frectonz/senamirmir-nixified";
       inputs.nixpkgs.follows = "nixpkgs";
