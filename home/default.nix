@@ -48,6 +48,7 @@
       unzip
 
       timer
+      ffmpeg
       bottom
       ranger
       obsidian
@@ -70,8 +71,10 @@
       inputs.license-gen.packages.${pkgs.system}.default
     ];
   };
+
   programs.htop.enable = true;
   programs.home-manager.enable = true;
+  programs.obs-studio.enable = true;
 
   xdg.mimeApps.enable = true;
 
