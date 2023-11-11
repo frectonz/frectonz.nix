@@ -23,9 +23,14 @@
       };
 
       font.size = 12.0;
-      font.bold.family = "Fira Code Nerd Font";
-      font.italic.family = "Fira Code Nerd Font";
-      font.normal.family = "Fira Code Nerd Font";
+
+      # font.bold.family = "Fira Code Nerd Font";
+      # font.italic.family = "Fira Code Nerd Font";
+      # font.normal.family = "Fira Code Nerd Font";
+
+      font.bold.family = "Monaspace Neon Var";
+      font.italic.family = "Monaspace Neon Var";
+      font.normal.family = "Monaspace Neon Var";
 
       # Colors (Ayu Dark)
       colors = {

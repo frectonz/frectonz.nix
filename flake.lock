@@ -321,7 +321,7 @@
     },
     "flake-utils_10": {
       "inputs": {
-        "systems": "systems_11"
+        "systems": "systems_12"
       },
       "locked": {
         "lastModified": 1694529238,
@@ -477,7 +477,7 @@
     },
     "flake-utils_9": {
       "inputs": {
-        "systems": "systems_10"
+        "systems": "systems_11"
       },
       "locked": {
         "lastModified": 1687709756,
@@ -496,6 +496,24 @@
     "fu": {
       "inputs": {
         "systems": "systems_9"
+      },
+      "locked": {
+        "lastModified": 1694529238,
+        "narHash": "sha256-zsNZZGTGnMOf9YpHKJqMSsa0dXbfmxeoJ7xHlrt+xmY=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "ff7b65b44d01cf9ba6a71320833626af21126384",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "fu_2": {
+      "inputs": {
+        "systems": "systems_10"
       },
       "locked": {
         "lastModified": 1694529238,
@@ -721,6 +739,27 @@
       "original": {
         "owner": "dune-universe",
         "repo": "mirage-opam-overlays",
+        "type": "github"
+      }
+    },
+    "monaspace": {
+      "inputs": {
+        "fu": "fu",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1699681645,
+        "narHash": "sha256-9D+PFnwJmAmKjaDjXKq2B8dKnt5M0HScIlR/I/BhXxA=",
+        "owner": "frectonz",
+        "repo": "monaspace",
+        "rev": "53f4d7aee3bfa035118427f6086ee781e2f29c7f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "frectonz",
+        "repo": "monaspace",
         "type": "github"
       }
     },
@@ -1003,6 +1042,7 @@
         "lithium": "lithium",
         "lobste-rs": "lobste-rs",
         "mekuteriya": "mekuteriya",
+        "monaspace": "monaspace",
         "nixos": "nixos",
         "nixpkgs": "nixpkgs_3",
         "senamirmir": "senamirmir",
@@ -1164,7 +1204,7 @@
     },
     "senamirmir": {
       "inputs": {
-        "fu": "fu",
+        "fu": "fu_2",
         "nixpkgs": [
           "nixpkgs"
         ]
@@ -1214,6 +1254,21 @@
       }
     },
     "systems_11": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_12": {
       "locked": {
         "lastModified": 1681028828,
         "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",

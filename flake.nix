@@ -64,6 +64,11 @@
       url = "github:frectonz/senamirmir-nixified";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    monaspace = {
+      url = "github:frectonz/monaspace";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
