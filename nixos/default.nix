@@ -64,8 +64,12 @@
       isNormalUser = true;
       shell = pkgs.fish;
       description = "frectonz";
-      extraGroups = [ "networkmanager" "wheel" "video" "audio" "wireshark" ];
+      extraGroups = [ "networkmanager" "wheel" "video" "audio" "wireshark" "docker" ];
     };
+  };
+
+  virtualisation.docker = {
+    enable = true;
   };
 
   programs.fish.enable = true;
