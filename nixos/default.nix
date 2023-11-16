@@ -75,7 +75,7 @@
   programs.fish.enable = true;
   programs.wireshark.enable = true;
 
-  environment.systemPackages = with pkgs; [ wireshark ];
+  environment.systemPackages = with pkgs; [ docker-compose wireshark ];
 
   fonts = {
     packages = with pkgs; [
