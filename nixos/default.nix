@@ -8,7 +8,9 @@
   imports = [
     ./sound.nix
     ./hardware.nix
-    ./hyprland.nix
+
+    ./i3.nix
+    # ./hyprland.nix
   ];
 
   nixpkgs = {

@@ -22,7 +22,7 @@
         y = 8;
       };
 
-      font.size = 12.0;
+      font.size = 10.0;
 
       # font.bold.family = "Fira Code Nerd Font";
       # font.italic.family = "Fira Code Nerd Font";
@@ -65,5 +65,9 @@
         };
       };
     };
+  };
+
+  home.sessionVariables = {
+    TERMINAL = "alacritty";
   };
 }
