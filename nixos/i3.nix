@@ -2,6 +2,8 @@
 , pkgs
 , ...
 }: {
+  environment.pathsToLink = [ "/libexec" ]; # links /libexec from derivations to /run/current-system/sw
+
   services.xserver = {
     enable = true;
 
@@ -23,5 +25,7 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [ rofi ];
+  environment.systemPackages = with pkgs; [ rofi nitrogen ];
+
+  programs.dconf.enable = true;
 }

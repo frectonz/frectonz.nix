@@ -66,6 +66,8 @@
       blender
       gnome.gnome-disk-utility
 
+      imagemagick
+
       inputs.tuime.defaultPackage.${pkgs.system}
       inputs.lobste-rs.packages.${pkgs.system}.bin
       inputs.mekuteriya.packages.${pkgs.system}.bin
