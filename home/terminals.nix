@@ -22,7 +22,7 @@
         y = 8;
       };
 
-      font.size = 10.0;
+      font.size = 8.0;
 
       # font.bold.family = "Fira Code Nerd Font";
       # font.italic.family = "Fira Code Nerd Font";

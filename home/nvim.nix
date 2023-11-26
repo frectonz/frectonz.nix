@@ -24,6 +24,9 @@
       vimPlugins.fidget-nvim
       vimPlugins.lualine-nvim
 
+      vimPlugins.conjure
+      vimPlugins.vim-parinfer
+
       (vimPlugins.nvim-treesitter.withPlugins (p: [
         p.tree-sitter-nix
         p.tree-sitter-lua

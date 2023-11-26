@@ -44,6 +44,7 @@
       vscode
 
       nil
+      nixd
 
       zip
       unzip
