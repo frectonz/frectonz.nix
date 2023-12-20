@@ -32,9 +32,6 @@
     dmenu-wayland
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
   ];
-
-  programs.light.enable = true;
-
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
