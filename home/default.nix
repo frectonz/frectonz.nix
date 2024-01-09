@@ -41,7 +41,7 @@
     packages = with pkgs; [
       fd
       feh
-      vscode
+      # vscode
 
       nil
       nixd
@@ -53,18 +53,18 @@
       ffmpeg
       bottom
       ranger
-      obsidian
+      # obsidian
       neofetch
-      processing
+      # processing
       libreoffice
       cool-retro-term
       transmission-gtk
       telegram-desktop
 
-      slack
-      discord
+      # slack
+      # discord
 
-      blender
+      # blender
       gnome.gnome-disk-utility
 
       imagemagick
