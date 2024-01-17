@@ -35,6 +35,8 @@
   };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelModules = [ "v4l2loopback" ];
+  boot.extraModulePackages = [ pkgs.linuxPackages_latest.v4l2loopback ];
 
   networking.hostName = "newton";
   networking.networkmanager.enable = true;
@@ -70,9 +72,9 @@
     };
   };
 
-  virtualisation.docker = {
-    enable = true;
-  };
+  # virtualisation.docker = {
+  #   enable = true;
+  # };
 
   programs.fish.enable = true;
   programs.wireshark.enable = true;
@@ -89,7 +91,14 @@
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
 
-  environment.systemPackages = with pkgs; [ docker-compose wireshark ];
+  # environment.systemPackages = with pkgs; [
+  #   wireshark
+  #   docker-compose
+
+  #   libv4l
+  #   v4l-utils
+  #   linuxPackages_latest.v4l2loopback
+  # ];
 
   fonts = {
     packages = with pkgs; [
