@@ -69,6 +69,10 @@
       url = "github:frectonz/monaspace";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    lessonalyzer = {
+      url = "github:frectonz/lessonalyzer";
+    };
   };
 
   outputs =

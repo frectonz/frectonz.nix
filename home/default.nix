@@ -77,6 +77,7 @@
       inputs.birru_cli.packages.${pkgs.system}.birru
       inputs.watchbox.packages.${pkgs.system}.default
       inputs.license-gen.packages.${pkgs.system}.default
+      inputs.lessonalyzer.packages.${pkgs.system}.default
     ];
   };
 
