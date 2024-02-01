@@ -10,6 +10,7 @@
     ./hardware.nix
 
     ./i3.nix
+    # ./nvidia.nix
     # ./hyprland.nix
   ];
 
@@ -99,6 +100,8 @@
   #   v4l-utils
   #   linuxPackages_latest.v4l2loopback
   # ];
+
+  environment.systemPackages = with pkgs; [ ollama ];
 
   fonts = {
     packages = with pkgs; [
