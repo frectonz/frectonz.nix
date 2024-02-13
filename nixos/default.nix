@@ -9,9 +9,9 @@
     ./sound.nix
     ./hardware.nix
 
-    ./i3.nix
+    # ./i3.nix
     # ./nvidia.nix
-    # ./hyprland.nix
+    ./hyprland.nix
   ];
 
   nixpkgs = {
@@ -42,14 +42,11 @@
   networking.hostName = "newton";
   networking.networkmanager.enable = true;
 
-  # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Set your time zone.
   time.timeZone = "Africa/Addis_Ababa";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -73,13 +70,8 @@
     };
   };
 
-  # virtualisation.docker = {
-  #   enable = true;
-  # };
-
   programs.fish.enable = true;
-  programs.wireshark.enable = true;
-
+  programs.light.enable = true;
   programs.thunar = {
     enable = true;
     plugins = with pkgs.xfce; [
@@ -91,17 +83,6 @@
 
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
-
-  # environment.systemPackages = with pkgs; [
-  #   wireshark
-  #   docker-compose
-
-  #   libv4l
-  #   v4l-utils
-  #   linuxPackages_latest.v4l2loopback
-  # ];
-
-  environment.systemPackages = with pkgs; [ ollama ];
 
   fonts = {
     packages = with pkgs; [
@@ -120,12 +101,6 @@
       };
     };
   };
-
-  virtualisation.libvirtd = {
-    enable = true;
-  };
-
-  programs.light.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.05";

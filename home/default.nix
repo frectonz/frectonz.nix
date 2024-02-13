@@ -41,30 +41,24 @@
     packages = with pkgs; [
       fd
       feh
-      # vscode
 
       nil
       nixd
 
       zip
       unzip
+      unrar
 
       timer
       ffmpeg
       bottom
       ranger
-      # obsidian
       neofetch
-      # processing
       libreoffice
       cool-retro-term
       transmission-gtk
       telegram-desktop
 
-      # slack
-      # discord
-
-      # blender
       gnome.gnome-disk-utility
 
       imagemagick
