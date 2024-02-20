@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
   home.packages = with pkgs; [ neovide ];
   programs.neovim = {
     enable = true;
@@ -24,14 +24,25 @@
       vimPlugins.fidget-nvim
       vimPlugins.lualine-nvim
 
-      vimPlugins.conjure
-      vimPlugins.vim-parinfer
+      # vimPlugins.conjure
+      # vimPlugins.vim-parinfer
+
+      vimPlugins.tokyonight-nvim
+
+      vimPlugins.gitsigns-nvim
+      vimPlugins.autoclose-nvim
 
       (vimPlugins.nvim-treesitter.withPlugins (p: [
         p.tree-sitter-nix
         p.tree-sitter-lua
         p.tree-sitter-rust
         p.tree-sitter-commonlisp
+        p.tree-sitter-astro
+        p.tree-sitter-tsx
+        p.tree-sitter-typescript
+        p.tree-sitter-javascript
+        p.tree-sitter-vimdoc
+        p.tree-sitter-css
       ]))
     ];
   };
