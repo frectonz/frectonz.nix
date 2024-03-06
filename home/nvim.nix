@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
   home.packages = with pkgs; [ neovide ];
   programs.neovim = {
     enable = true;
@@ -28,6 +28,7 @@
       # vimPlugins.vim-parinfer
 
       vimPlugins.tokyonight-nvim
+      config.nur.repos.m15a.vimExtraPlugins.vim-moonfly-colors
 
       vimPlugins.gitsigns-nvim
       vimPlugins.autoclose-nvim

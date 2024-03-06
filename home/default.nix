@@ -21,6 +21,8 @@
     ./players.nix
     ./browsers.nix
     ./terminals.nix
+
+    inputs.nur.hmModules.nur
   ];
 
   nixpkgs = {
