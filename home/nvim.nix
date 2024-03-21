@@ -44,6 +44,8 @@
         p.tree-sitter-javascript
         p.tree-sitter-vimdoc
         p.tree-sitter-css
+        p.tree-sitter-svelte
+        p.tree-sitter-html
       ]))
     ];
   };
