@@ -1,16 +1,10 @@
 { pkgs, config, lib, ... }:
-let
-  pinentry = {
-    packages = [ pkgs.pinentry-gnome pkgs.gcr ];
-    name = "gnome3";
-  };
-in
 {
-  home.packages = pinentry.packages;
+  home.packages = [ pkgs.gcr ];
 
   services.gpg-agent = {
     enable = true;
-    pinentryFlavor = pinentry.name;
+    pinentryPackage = pkgs.pinentry-gnome3;
   };
 
   programs =

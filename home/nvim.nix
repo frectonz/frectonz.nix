@@ -1,4 +1,16 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, ... }:
+let
+  vim-rescript = pkgs.vimUtils.buildVimPlugin {
+    name = "vim-rescript";
+    src = pkgs.fetchFromGitHub {
+      owner = "rescript-lang";
+      repo = "vim-rescript";
+      rev = "master";
+      hash = "sha256-JpEO1Zb+mm9dJISriticFmtPeVwZGpUAFv18wV6/dIg=";
+    };
+  };
+in
+{
   home.packages = with pkgs; [ neovide ];
   programs.neovim = {
     enable = true;
@@ -33,6 +45,8 @@
       vimPlugins.gitsigns-nvim
       vimPlugins.autoclose-nvim
 
+      vim-rescript
+
       (vimPlugins.nvim-treesitter.withPlugins (p: [
         p.tree-sitter-nix
         p.tree-sitter-lua
@@ -46,6 +60,7 @@
         p.tree-sitter-css
         p.tree-sitter-svelte
         p.tree-sitter-html
+        p.tree-sitter-ocaml
       ]))
     ];
   };
