@@ -61,6 +61,7 @@ in
         p.tree-sitter-svelte
         p.tree-sitter-html
         p.tree-sitter-ocaml
+        p.tree-sitter-elm
       ]))
     ];
   };
