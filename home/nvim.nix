@@ -47,6 +47,8 @@ in
 
       vim-rescript
 
+      vimPlugins.typst-vim
+
       (vimPlugins.nvim-treesitter.withPlugins (p: [
         p.tree-sitter-nix
         p.tree-sitter-lua
