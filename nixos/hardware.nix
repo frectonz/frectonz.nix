@@ -3,7 +3,6 @@
 # to /etc/nixos/configuration.nix instead.
 { config
 , lib
-, pkgs
 , modulesPath
 , ...
 }: {
@@ -27,7 +26,7 @@
   };
 
   fileSystems."/home/frectonz/hdd" = {
-    device = "dev/disk/by-uuid/c66b78d5-3008-4c21-9bac-0b9bd73e1988";
+    device = "/dev/disk/by-label/fedora_localhost-live";
     fsType = "btrfs";
   };
 

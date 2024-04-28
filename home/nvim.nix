@@ -64,6 +64,7 @@ in
         p.tree-sitter-html
         p.tree-sitter-ocaml
         p.tree-sitter-elm
+        p.tree-sitter-ruby
       ]))
     ];
   };
