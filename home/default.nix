@@ -51,6 +51,8 @@
       unzip
       unrar
 
+      devbox
+
       timer
       ffmpeg
       bottom
