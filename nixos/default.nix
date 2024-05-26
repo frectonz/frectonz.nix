@@ -84,6 +84,8 @@
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
 
+  virtualisation.docker.enable = true;
+
   fonts = {
     packages = with pkgs; [
       noto-fonts
