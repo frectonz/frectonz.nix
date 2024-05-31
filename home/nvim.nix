@@ -65,6 +65,7 @@ in
         p.tree-sitter-ocaml
         p.tree-sitter-elm
         p.tree-sitter-ruby
+        p.tree-sitter-elixir
       ]))
     ];
   };
