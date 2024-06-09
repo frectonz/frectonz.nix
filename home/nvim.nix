@@ -49,6 +49,8 @@ in
 
       vimPlugins.typst-vim
 
+      vimPlugins.bufferline-nvim
+
       (vimPlugins.nvim-treesitter.withPlugins (p: [
         p.tree-sitter-nix
         p.tree-sitter-lua
