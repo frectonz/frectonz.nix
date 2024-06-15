@@ -9,9 +9,9 @@
     ./sound.nix
     ./hardware.nix
 
-    # ./i3.nix
+    ./i3.nix
     # ./nvidia.nix
-    ./hyprland.nix
+    # ./hyprland.nix
   ];
 
   nixpkgs = {
