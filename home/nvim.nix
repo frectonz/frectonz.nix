@@ -44,12 +44,11 @@ in
 
       vimPlugins.gitsigns-nvim
       vimPlugins.autoclose-nvim
+      vimPlugins.bufferline-nvim
 
       vim-rescript
-
+      vimPlugins.unison
       vimPlugins.typst-vim
-
-      vimPlugins.bufferline-nvim
 
       (vimPlugins.nvim-treesitter.withPlugins (p: [
         p.tree-sitter-nix
@@ -68,6 +67,7 @@ in
         p.tree-sitter-elm
         p.tree-sitter-ruby
         p.tree-sitter-elixir
+        p.tree-sitter-unison
       ]))
     ];
   };
