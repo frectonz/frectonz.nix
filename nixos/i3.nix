@@ -3,15 +3,15 @@
 }: {
   environment.pathsToLink = [ "/libexec" ]; # links /libexec from derivations to /run/current-system/sw
 
+  services.displayManager = {
+    defaultSession = "none+i3";
+  };
+
   services.xserver = {
     enable = true;
 
     desktopManager = {
       xterm.enable = false;
-    };
-
-    displayManager = {
-      defaultSession = "none+i3";
     };
 
     windowManager.i3 = {

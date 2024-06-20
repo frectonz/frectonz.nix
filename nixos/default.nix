@@ -93,7 +93,6 @@
       (nerdfonts.override { fonts = [ "FiraCode" ]; })
 
       inputs.monaspace.packages.${pkgs.system}.default
-
       inputs.senamirmir.packages.${pkgs.system}.Senamirmir
       inputs.senamirmir.packages.${pkgs.system}.LeTewahedo
     ];
@@ -110,5 +109,5 @@
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  system.stateVersion = "23.05";
+  system.stateVersion = "24.11";
 }
