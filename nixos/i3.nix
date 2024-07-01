@@ -24,7 +24,7 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [ rofi nitrogen ];
+  environment.systemPackages = with pkgs; [ rofi nitrogen xclip maim ];
 
   programs.dconf.enable = true;
 }
