@@ -67,6 +67,7 @@ in
         p.tree-sitter-elm
         p.tree-sitter-ruby
         p.tree-sitter-elixir
+        p.tree-sitter-heex
         p.tree-sitter-unison
       ]))
     ];
