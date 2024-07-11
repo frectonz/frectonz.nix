@@ -818,22 +818,6 @@
         "type": "github"
       }
     },
-    "nixos": {
-      "locked": {
-        "lastModified": 1720542800,
-        "narHash": "sha256-ZgnNHuKV6h2+fQ5LuqnUaqZey1Lqqt5dTUAiAnqH0QQ=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "feb2849fdeb70028c70d73b848214b00d324a497",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1699099776,
@@ -1205,7 +1189,6 @@
         "mekuteriya": "mekuteriya",
         "monaspace": "monaspace",
         "murder_tool": "murder_tool",
-        "nixos": "nixos",
         "nixpkgs": "nixpkgs_5",
         "nur": "nur",
         "senamirmir": "senamirmir",

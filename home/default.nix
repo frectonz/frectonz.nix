@@ -60,7 +60,6 @@
       neofetch
       libreoffice
       cool-retro-term
-      transmission-gtk
       telegram-desktop
 
       gnome.gnome-disk-utility

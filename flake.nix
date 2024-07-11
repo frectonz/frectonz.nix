@@ -2,7 +2,6 @@
   description = "frectonz's nix config";
 
   inputs = {
-    nixos.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
 
