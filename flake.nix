@@ -2,7 +2,9 @@
   description = "frectonz's nix config";
 
   inputs = {
+    stable.url = "github:nixos/nixpkgs/nixos-24.05";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     nur.url = "github:nix-community/NUR";
 
     home-manager = {

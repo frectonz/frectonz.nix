@@ -63,6 +63,7 @@
       telegram-desktop
 
       gnome.gnome-disk-utility
+      inputs.stable.legacyPackages.x86_64-linux.transmission-gtk
 
       imagemagick
 
