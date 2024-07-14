@@ -52,6 +52,7 @@
       unrar
 
       devbox
+      devenv
 
       timer
       ffmpeg
