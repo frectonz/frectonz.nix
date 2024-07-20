@@ -66,6 +66,8 @@
       gnome.gnome-disk-utility
       inputs.stable.legacyPackages.x86_64-linux.transmission-gtk
 
+      (openai-whisper-cpp.override { cudaSupport = true; })
+
       imagemagick
 
       inputs.tuime.defaultPackage.${pkgs.system}
