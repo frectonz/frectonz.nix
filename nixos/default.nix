@@ -101,6 +101,11 @@
     package = pkgs.mariadb;
   };
 
+  services.ollama = {
+    enable = true;
+    acceleration = "cuda";
+  };
+
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
 
