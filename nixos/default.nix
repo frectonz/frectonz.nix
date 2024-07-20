@@ -10,7 +10,7 @@
     ./hardware.nix
 
     ./i3.nix
-    # ./nvidia.nix
+    ./nvidia.nix
     # ./hyprland.nix
   ];
 
