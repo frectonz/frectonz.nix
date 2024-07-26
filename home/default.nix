@@ -22,6 +22,8 @@
     ./browsers.nix
     ./terminals.nix
 
+    ./dotfiles.nix
+
     inputs.nur.hmModules.nur
   ];
 
@@ -43,43 +45,32 @@
     packages = with pkgs; [
       fd
       feh
-
       nil
       nixd
-
       zip
       unzip
       unrar
-
       devbox
       devenv
-
       timer
       ffmpeg
       bottom
       ranger
       neofetch
       libreoffice
+      imagemagick
       cool-retro-term
       telegram-desktop
-
       gnome.gnome-disk-utility
-      inputs.stable.legacyPackages.x86_64-linux.transmission-gtk
-
-      (openai-whisper-cpp.override { cudaSupport = true; })
-
-      imagemagick
-
       inputs.tuime.defaultPackage.${pkgs.system}
       inputs.lobste-rs.packages.${pkgs.system}.bin
-      inputs.mekuteriya.packages.${pkgs.system}.bin
-      inputs.battop.packages.${pkgs.system}.default
-      inputs.lithium.packages.${pkgs.system}.default
-      inputs.birru_cli.packages.${pkgs.system}.birru
+      # inputs.mekuteriya.packages.${pkgs.system}.bin
       inputs.watchbox.packages.${pkgs.system}.default
       inputs.license-gen.packages.${pkgs.system}.default
       inputs.murder_tool.packages.${pkgs.system}.default
       inputs.lessonalyzer.packages.${pkgs.system}.default
+      (openai-whisper-cpp.override { cudaSupport = true; })
+      inputs.stable.legacyPackages.x86_64-linux.transmission-gtk
     ];
   };
 
@@ -93,5 +84,5 @@
   systemd.user.startServices = "sd-switch";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  home.stateVersion = "24.11";
+  home.stateVersion = "24.05";
 }

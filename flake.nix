@@ -22,63 +22,75 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
 
+    flake-utils.url = "github:numtide/flake-utils";
+
+    crane = {
+      url = "github:ipetkov/crane";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    opam-nix = {
+      url = "github:tweag/opam-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
+
     mekuteriya = {
       url = "github:frectonz/mek-ut-er-ya";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
     };
 
     tuime = {
       url = "github:nate-sys/tuime";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
     };
 
     lobste-rs = {
       url = "github:frectonz/lobste-rs";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    lithium = {
-      url = "github:frectonz/lithium";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.crane.follows = "crane";
     };
 
     license-gen = {
       url = "github:frectonz/license-gen";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    battop = {
-      url = "github:frectonz/rust-battop";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    birru_cli = {
-      url = "github:frectonz/birru_cli";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.crane.follows = "crane";
     };
 
     watchbox = {
       url = "github:frectonz/watchbox";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.opam-nix.follows = "opam-nix";
     };
 
     murder_tool = {
       url = "github:frectonz/murder_tool";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.opam-nix.follows = "opam-nix";
     };
 
     senamirmir = {
       url = "github:frectonz/senamirmir-nixified";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.fu.follows = "flake-utils";
     };
 
     monaspace = {
       url = "github:frectonz/monaspace";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.fu.follows = "flake-utils";
     };
 
     lessonalyzer = {
       url = "github:frectonz/lessonalyzer";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.utils.follows = "flake-utils";
     };
   };
 
