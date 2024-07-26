@@ -24,11 +24,6 @@
 
     flake-utils.url = "github:numtide/flake-utils";
 
-    crane = {
-      url = "github:ipetkov/crane";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     opam-nix = {
       url = "github:tweag/opam-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -51,14 +46,12 @@
       url = "github:frectonz/lobste-rs";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
-      inputs.crane.follows = "crane";
     };
 
     license-gen = {
       url = "github:frectonz/license-gen";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
-      inputs.crane.follows = "crane";
     };
 
     watchbox = {

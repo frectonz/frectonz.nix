@@ -3,6 +3,7 @@
     "crane": {
       "inputs": {
         "nixpkgs": [
+          "license-gen",
           "nixpkgs"
         ]
       },
@@ -21,6 +22,27 @@
       }
     },
     "crane_2": {
+      "inputs": {
+        "nixpkgs": [
+          "lobste-rs",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1721842668,
+        "narHash": "sha256-k3oiD2z2AAwBFLa4+xfU+7G5fisRXfkvrMTCJrjZzXo=",
+        "owner": "ipetkov",
+        "repo": "crane",
+        "rev": "529c1a0b1f29f0d78fa3086b8f6a134c71ef3aaf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ipetkov",
+        "repo": "crane",
+        "type": "github"
+      }
+    },
+    "crane_3": {
       "inputs": {
         "flake-compat": "flake-compat",
         "flake-utils": [
@@ -145,9 +167,7 @@
     },
     "license-gen": {
       "inputs": {
-        "crane": [
-          "crane"
-        ],
+        "crane": "crane",
         "flake-utils": [
           "flake-utils"
         ],
@@ -172,9 +192,7 @@
     },
     "lobste-rs": {
       "inputs": {
-        "crane": [
-          "crane"
-        ],
+        "crane": "crane_2",
         "flake-utils": [
           "flake-utils"
         ],
@@ -199,7 +217,7 @@
     },
     "mekuteriya": {
       "inputs": {
-        "crane": "crane_2",
+        "crane": "crane_3",
         "flake-utils": [
           "flake-utils"
         ],
@@ -433,7 +451,6 @@
     },
     "root": {
       "inputs": {
-        "crane": "crane",
         "flake-utils": "flake-utils",
         "home-manager": "home-manager",
         "lessonalyzer": "lessonalyzer",
