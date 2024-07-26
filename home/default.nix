@@ -50,9 +50,7 @@
       zip
       unzip
       unrar
-      devbox
       devenv
-      timer
       ffmpeg
       bottom
       ranger
@@ -61,7 +59,7 @@
       imagemagick
       cool-retro-term
       telegram-desktop
-      gnome.gnome-disk-utility
+      gnome-disk-utility
       inputs.tuime.defaultPackage.${pkgs.system}
       inputs.lobste-rs.packages.${pkgs.system}.bin
       inputs.mekuteriya.packages.${pkgs.system}.bin
