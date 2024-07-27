@@ -24,12 +24,6 @@
 
     flake-utils.url = "github:numtide/flake-utils";
 
-    opam-nix = {
-      url = "github:tweag/opam-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-    };
-
     mekuteriya = {
       url = "github:frectonz/mek-ut-er-ya";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -58,14 +52,12 @@
       url = "github:frectonz/watchbox";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
-      inputs.opam-nix.follows = "opam-nix";
     };
 
     murder_tool = {
       url = "github:frectonz/murder_tool";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
-      inputs.opam-nix.follows = "opam-nix";
     };
 
     senamirmir = {
