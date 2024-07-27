@@ -60,6 +60,7 @@
       cool-retro-term
       telegram-desktop
       gnome-disk-utility
+      transmission_4-gtk
       inputs.tuime.defaultPackage.${pkgs.system}
       inputs.lobste-rs.packages.${pkgs.system}.bin
       inputs.mekuteriya.packages.${pkgs.system}.bin
@@ -68,13 +69,17 @@
       inputs.murder_tool.packages.${pkgs.system}.default
       inputs.lessonalyzer.packages.${pkgs.system}.default
       (openai-whisper-cpp.override { cudaSupport = true; })
-      inputs.stable.legacyPackages.x86_64-linux.transmission-gtk
     ];
   };
 
   programs.htop.enable = true;
   programs.home-manager.enable = true;
   programs.obs-studio.enable = true;
+
+  programs.atuin = {
+    enable = true;
+    enableFishIntegration = true;
+  };
 
   xdg.mimeApps.enable = true;
 
