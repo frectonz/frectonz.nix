@@ -27,7 +27,7 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
-  fileSystems."/home/frectonz/hdd" = {
+  fileSystems."/home/frectonz/Data" = {
     device = "/dev/disk/by-label/fedora_localhost-live";
     fsType = "btrfs";
   };
