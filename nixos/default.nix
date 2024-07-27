@@ -12,6 +12,9 @@
     ./i3.nix
     ./nvidia.nix
     # ./hyprland.nix
+
+    ./games.nix
+    # ./databases.nix
   ];
 
   nixpkgs = {
@@ -22,6 +25,7 @@
     ];
     config = {
       allowUnfree = true;
+      pulseaudio = true;
     };
   };
 
@@ -38,17 +42,23 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "v4l2loopback" ];
   boot.extraModulePackages = [ pkgs.linuxPackages_latest.v4l2loopback ];
-
-  networking.hostName = "newton";
-  networking.networkmanager.enable = true;
-
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  networking.hostName = "newton";
+  networking.networkmanager.enable = true;
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ ];
+  };
+
   time.timeZone = "Africa/Addis_Ababa";
-
   i18n.defaultLocale = "en_US.UTF-8";
-
+  i18n.inputMethod = {
+    enable = true;
+    type = "ibus";
+    ibus.engines = with pkgs.ibus-engines; [ m17n ];
+  };
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
     LC_IDENTIFICATION = "en_US.UTF-8";
@@ -72,6 +82,7 @@
 
   programs.fish.enable = true;
   programs.light.enable = true;
+
   programs.thunar = {
     enable = true;
     plugins = with pkgs.xfce; [
@@ -80,53 +91,15 @@
       thunar-media-tags-plugin
     ];
   };
+  services.gvfs.enable = true; # Mount, trash, and other functionalities
+  services.tumbler.enable = true; # Thumbnail support for images
 
-  services.postgresql = {
-    enable = true;
-    enableTCPIP = true;
-    authentication = pkgs.lib.mkOverride 10 ''
-      #type database  DBuser  auth-method
-      local all       all     trust
-
-      #type database DBuser origin-address auth-method
-      # ipv4
-      host  all      all     127.0.0.1/32   trust
-      # ipv6
-      host all       all     ::1/128        trust
-    '';
-  };
-
-  services.mysql = {
-    enable = true;
-    package = pkgs.mariadb;
-  };
+  virtualisation.docker.enable = true;
 
   services.ollama = {
     enable = true;
     acceleration = "cuda";
   };
-
-  programs.steam.enable = true;
-  programs.steam.gamescopeSession.enable = true;
-  programs.gamemode.enable = true;
-
-  environment.systemPackages = [
-    pkgs.mangohud
-    pkgs.lutris
-    pkgs.protonup
-    pkgs.wineWowPackages.stable
-    pkgs.winetricks
-    pkgs.rpcs3
-  ];
-
-  environment.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/frectonz/.steam/root/compatibilitytools.d";
-  };
-
-  services.gvfs.enable = true; # Mount, trash, and other functionalities
-  services.tumbler.enable = true; # Thumbnail support for images
-
-  virtualisation.docker.enable = true;
 
   fonts = {
     packages = with pkgs; [
@@ -143,11 +116,6 @@
         monospace = [ "Fira Code Nerd Font" ];
       };
     };
-  };
-
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [ 8081 ];
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

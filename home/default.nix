@@ -17,7 +17,6 @@
     ./zathura.nix
     ./starship.nix
 
-    ./games.nix
     ./players.nix
     ./browsers.nix
     ./terminals.nix
@@ -36,6 +35,7 @@
     config = {
       allowUnfree = true;
       allowUnfreePredicate = _: true;
+      pulseaudio = true;
     };
   };
 

@@ -7,11 +7,6 @@
     defaultSession = "none+i3";
   };
 
-  i18n.inputMethod = {
-    enabled = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [ m17n ];
-  };
-
   services.xserver = {
     enable = true;
 
