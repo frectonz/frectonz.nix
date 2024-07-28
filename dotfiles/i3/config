@@ -179,7 +179,7 @@ bindsym $mod+Print exec maim -s | xclip -selection clipboard -target image/png
 
 # shortcuts
 bindsym $mod+P exec passmenu
-bindsym $mod+F1 exec firefox
+bindsym $mod+F1 exec chromium
 bindsym $mod+T exec telegram-desktop
 bindsym $mod+C exec alacritty --title tuime -e tuime
 bindsym $mod+Tab exec alacritty --title ranger -e ranger

@@ -9,15 +9,15 @@
 
   home = {
     sessionVariables = {
-      BROWSER = "firefox";
-      DEFAULT_BROWSER = "firefox";
+      BROWSER = "chromium";
+      DEFAULT_BROWSER = "chromium";
     };
   };
 
   xdg.mimeApps.defaultApplications = {
-    "text/html" = "firefox.desktop";
-    "x-scheme-handler/http" = "firefox.desktop";
-    "x-scheme-handler/https" = "firefox.desktop";
-    "x-scheme-handler/about" = "firefox.desktop";
+    "text/html" = "chromium.desktop";
+    "x-scheme-handler/http" = "chromium.desktop";
+    "x-scheme-handler/https" = "chromium.desktop";
+    "x-scheme-handler/about" = "chromium.desktop";
   };
 }
