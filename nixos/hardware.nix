@@ -16,23 +16,18 @@
 
   fileSystems."/" =
     {
-      device = "/dev/disk/by-uuid/4ac11f0b-e7f3-4e3d-96db-b007ee9649fc";
+      device = "/dev/disk/by-uuid/1ce32a6e-49fb-4a66-9db1-9436f2ba02a9";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
     {
-      device = "/dev/disk/by-uuid/6248-8AA9";
+      device = "/dev/disk/by-uuid/12C7-3998";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
-  fileSystems."/home/frectonz/Data" = {
-    device = "/dev/disk/by-label/fedora_localhost-live";
-    fsType = "btrfs";
-  };
-
-  swapDevices = [{ device = "/dev/disk/by-uuid/32eaee7f-543f-4906-8056-40a3248a35ac"; }];
+  swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's

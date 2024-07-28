@@ -118,6 +118,16 @@
     };
   };
 
+  swapDevices = [{
+    device = "/var/lib/swapfile";
+    size = 16 * 1024;
+  }];
+
+  fileSystems."/home/frectonz/Data" = {
+    device = "/dev/disk/by-label/hdd";
+    fsType = "btrfs";
+  };
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
 }
