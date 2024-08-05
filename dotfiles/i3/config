@@ -174,8 +174,8 @@ bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
 # screenshots
-bindsym Print exec maim | xclip -selection clipboard -target image/png
-bindsym $mod+Print exec maim -s | xclip -selection clipboard -target image/png
+bindsym Print exec maim --hidecursor | xclip -selection clipboard -target image/png
+bindsym $mod+Print exec maim --hidecursor -s | xclip -selection clipboard -target image/png
 
 # shortcuts
 bindsym $mod+P exec passmenu
