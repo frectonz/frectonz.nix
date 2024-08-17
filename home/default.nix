@@ -63,8 +63,8 @@
       transmission_4-gtk
       inputs.tuime.defaultPackage.${pkgs.system}
       inputs.lobste-rs.packages.${pkgs.system}.bin
-      inputs.mekuteriya.packages.${pkgs.system}.bin
       inputs.watchbox.packages.${pkgs.system}.default
+      inputs.mekuteriya.packages.${pkgs.system}.default
       inputs.license-gen.packages.${pkgs.system}.default
       inputs.murder_tool.packages.${pkgs.system}.default
       inputs.lessonalyzer.packages.${pkgs.system}.default

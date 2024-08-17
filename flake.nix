@@ -66,12 +66,6 @@
       inputs.fu.follows = "flake-utils";
     };
 
-    monaspace = {
-      url = "github:frectonz/monaspace";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.fu.follows = "flake-utils";
-    };
-
     lessonalyzer = {
       url = "github:frectonz/lessonalyzer";
       inputs.nixpkgs.follows = "nixpkgs";

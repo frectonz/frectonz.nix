@@ -104,11 +104,10 @@
 
   fonts = {
     packages = with pkgs; [
+      monaspace
       noto-fonts
       noto-fonts-emoji
       (nerdfonts.override { fonts = [ "FiraCode" ]; })
-
-      inputs.monaspace.packages.${pkgs.system}.default
       inputs.senamirmir.packages.${pkgs.system}.Senamirmir
       inputs.senamirmir.packages.${pkgs.system}.LeTewahedo
     ];

@@ -6,7 +6,7 @@ let
       owner = "rescript-lang";
       repo = "vim-rescript";
       rev = "master";
-      hash = "sha256-JpEO1Zb+mm9dJISriticFmtPeVwZGpUAFv18wV6/dIg=";
+      hash = "sha256-l12sg9O5elqWTFRs9asa9xMnKw5GbV7ZB8HmtjcFVps=";
     };
   };
 in
