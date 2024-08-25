@@ -140,6 +140,27 @@
 
   programs.command-not-found.enable = false;
 
+  services.nomad = {
+    enable = true;
+    enableDocker = true;
+    dropPrivileges = false;
+    settings = {
+      bind_addr = "127.0.0.1";
+      client.enabled = true;
+
+      advertise = {
+        http = "127.0.0.1";
+        rpc = "127.0.0.1";
+        serf = "127.0.0.1";
+      };
+
+      server = {
+        enabled = true;
+        bootstrap_expect = 1;
+      };
+    };
+  };
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
 }
