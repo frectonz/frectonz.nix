@@ -10,10 +10,11 @@
     ./hardware.nix
 
     ./i3.nix
+    ./games.nix
     ./nvidia.nix
     # ./hyprland.nix
 
-    ./games.nix
+    ./nomad.nix
     # ./databases.nix
   ];
 
@@ -52,10 +53,7 @@
 
   networking.hostName = "newton";
   networking.networkmanager.enable = true;
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [ ];
-  };
+  networking.firewall.enable = true;
 
   time.timeZone = "Africa/Addis_Ababa";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -139,27 +137,6 @@
   };
 
   programs.command-not-found.enable = false;
-
-  services.nomad = {
-    enable = true;
-    enableDocker = true;
-    dropPrivileges = false;
-    settings = {
-      bind_addr = "127.0.0.1";
-      client.enabled = true;
-
-      advertise = {
-        http = "127.0.0.1";
-        rpc = "127.0.0.1";
-        serf = "127.0.0.1";
-      };
-
-      server = {
-        enabled = true;
-        bootstrap_expect = 1;
-      };
-    };
-  };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
