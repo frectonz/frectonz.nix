@@ -97,7 +97,12 @@
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
 
-  virtualisation.docker.enable = true;
+  virtualisation.docker = {
+    enable = true;
+    daemon.settings = {
+      insecure-registries = [ "192.168.122.177:4003" ];
+    };
+  };
 
   services.ollama = {
     enable = true;
