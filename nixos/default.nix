@@ -14,7 +14,7 @@
     ./nvidia.nix
     # ./hyprland.nix
 
-    ./nomad.nix
+    # ./nomad.nix
     # ./databases.nix
   ];
 
