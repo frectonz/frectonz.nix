@@ -10,7 +10,7 @@
     ./hardware.nix
 
     ./i3.nix
-    #./games.nix
+    # ./games.nix
     ./nvidia.nix
     # ./hyprland.nix
 
@@ -45,9 +45,10 @@
       nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
     };
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelModules = [ "v4l2loopback" ];
-  boot.extraModulePackages = [ pkgs.linuxPackages_latest.v4l2loopback ];
+  #boot.kernelPackages = pkgs.linuxPackages_latest;
+  #boot.kernelModules = [ "v4l2loopback" ];
+  #boot.extraModulePackages = [ pkgs.linuxPackages_latest.v4l2loopback ];
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -143,8 +144,10 @@
 
   programs.command-not-found.enable = false;
 
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
+  #virtualisation.libvirtd.enable = true;
+  #programs.virt-manager.enable = true;
+
+  virtualisation.vmware.host.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
