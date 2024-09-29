@@ -24,12 +24,6 @@
 
     flake-utils.url = "github:numtide/flake-utils";
 
-    mekuteriya = {
-      url = "github:frectonz/mek-ut-er-ya";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-    };
-
     tuime = {
       url = "github:nate-sys/tuime";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -58,12 +52,6 @@
       url = "github:frectonz/murder_tool";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
-    };
-
-    senamirmir = {
-      url = "github:frectonz/senamirmir-nixified";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.fu.follows = "flake-utils";
     };
 
     lessonalyzer = {

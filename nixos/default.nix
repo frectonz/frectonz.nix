@@ -6,15 +6,14 @@
 , ...
 }: {
   imports = [
+    ./i3.nix
     ./sound.nix
+    ./nvidia.nix
     ./hardware.nix
 
-    ./i3.nix
     # ./games.nix
-    ./nvidia.nix
-    # ./hyprland.nix
-
     # ./nomad.nix
+    # ./hyprland.nix
     # ./databases.nix
   ];
 
@@ -98,17 +97,7 @@
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
 
-  virtualisation.docker = {
-    enable = true;
-    daemon.settings = {
-      insecure-registries = [ "192.168.122.177:4003" ];
-    };
-  };
-
-  services.ollama = {
-    enable = true;
-    acceleration = "cuda";
-  };
+  virtualisation.docker.enable = true;
 
   fonts = {
     packages = with pkgs; [
@@ -116,8 +105,6 @@
       noto-fonts
       noto-fonts-emoji
       (nerdfonts.override { fonts = [ "FiraCode" ]; })
-      inputs.senamirmir.packages.${pkgs.system}.Senamirmir
-      inputs.senamirmir.packages.${pkgs.system}.LeTewahedo
     ];
     fontconfig = {
       defaultFonts = {
@@ -147,7 +134,12 @@
   #virtualisation.libvirtd.enable = true;
   #programs.virt-manager.enable = true;
 
-  virtualisation.vmware.host.enable = true;
+  #virtualisation.vmware.host.enable = true;
+
+  #services.ollama = {
+  #  enable = true;
+  #  acceleration = "cuda";
+  #};
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
