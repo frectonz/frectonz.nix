@@ -39,7 +39,7 @@ local lsp_flags = {
 
 local nvim_lsp = require('lspconfig')
 
-require('lspconfig')['tsserver'].setup {
+require('lspconfig')['ts_ls'].setup {
   on_attach = on_attach,
   flags = lsp_flags,
   root_dir = nvim_lsp.util.root_pattern("package.json"),

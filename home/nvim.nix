@@ -71,6 +71,8 @@ in
         p.tree-sitter-unison
         p.tree-sitter-roc
         p.tree-sitter-hcl
+        p.tree-sitter-terraform
+        p.tree-sitter-hurl
       ]))
     ];
   };
