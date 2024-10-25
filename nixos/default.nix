@@ -6,14 +6,14 @@
 , ...
 }: {
   imports = [
-    ./i3.nix
     ./sound.nix
     ./nvidia.nix
+    ./hyprland.nix
     ./hardware.nix
 
+    # ./i3.nix
     # ./games.nix
     # ./nomad.nix
-    # ./hyprland.nix
     # ./databases.nix
   ];
 

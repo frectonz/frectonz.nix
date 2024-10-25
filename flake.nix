@@ -12,16 +12,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # hyprland = {
-    #   url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
-    # hyprland-contrib = {
-    #   url = "github:hyprwm/contrib";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
     flake-utils.url = "github:numtide/flake-utils";
 
     tuime = {

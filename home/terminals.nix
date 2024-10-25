@@ -1,29 +1,14 @@
 { ... }:
 {
-  programs.wezterm = {
-    enable = true;
-    extraConfig = /* lua */ ''
-      return {
-        font_size = 12.0,
-        font = wezterm.font("Fira Code Nerd Font"),
-        hide_tab_bar_if_only_one_tab = true,
-        window_close_confirmation = "NeverPrompt",
-        set_environment_variables = {
-          TERM = 'wezterm',
-        }
-      }
-    '';
-  };
-
   programs.alacritty = {
     enable = true;
     settings = {
       window.padding = {
-        x = 8;
-        y = 8;
+        x = 10;
+        y = 10;
       };
 
-      font.size = 8.0;
+      font.size = 10.0;
 
       font.bold.family = "Fira Code Nerd Font";
       font.italic.family = "Fira Code Nerd Font";

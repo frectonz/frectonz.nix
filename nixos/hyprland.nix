@@ -4,8 +4,6 @@
 }: {
   programs.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
     xwayland.enable = true;
   };
 
@@ -25,11 +23,11 @@
     mako
     libnotify
 
-    swww
     wofi
     xdg-utils
     dmenu-wayland
-    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+    grimblast
+    hyprpaper
   ];
   xdg.portal = {
     enable = true;
