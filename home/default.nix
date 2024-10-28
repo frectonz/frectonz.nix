@@ -46,8 +46,8 @@
       fd
       feh
       nil
-      nixd
       zip
+      nixd
       unzip
       unrar
       devenv
@@ -55,6 +55,7 @@
       bottom
       ranger
       neofetch
+      zed-editor
       mekuteriya
       libreoffice
       imagemagick
