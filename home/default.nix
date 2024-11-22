@@ -54,6 +54,7 @@
       ffmpeg
       bottom
       ranger
+      postman
       neofetch
       zed-editor
       mekuteriya
