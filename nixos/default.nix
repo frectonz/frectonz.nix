@@ -6,14 +6,14 @@
 , ...
 }: {
   imports = [
+    ./i3.nix
     ./sound.nix
     ./nvidia.nix
-    ./hyprland.nix
     ./hardware.nix
 
-    # ./i3.nix
     # ./games.nix
     # ./nomad.nix
+    # ./hyprland.nix
     # ./databases.nix
   ];
 
@@ -42,6 +42,9 @@
       channel.enable = false;
       registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
       nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+      extraOptions = ''
+        trusted-users = root frectonz
+      '';
     };
 
   #boot.kernelPackages = pkgs.linuxPackages_latest;
