@@ -57,6 +57,7 @@
   networking.hostName = "newton";
   networking.networkmanager.enable = true;
   networking.firewall.enable = true;
+  networking.firewall.allowedTCPPorts = [ 8081 ];
 
   time.timeZone = "Africa/Addis_Ababa";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -107,7 +108,7 @@
       monaspace
       noto-fonts
       noto-fonts-emoji
-      (nerdfonts.override { fonts = [ "FiraCode" ]; })
+      nerd-fonts.fira-code
     ];
     fontconfig = {
       defaultFonts = {

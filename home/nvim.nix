@@ -73,6 +73,7 @@ in
         p.tree-sitter-hcl
         p.tree-sitter-terraform
         p.tree-sitter-hurl
+        p.tree-sitter-graphql
       ]))
     ];
   };

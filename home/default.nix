@@ -48,6 +48,7 @@
       nil
       zip
       nixd
+      dive
       unzip
       unrar
       devenv
@@ -56,6 +57,7 @@
       ranger
       postman
       neofetch
+      diskonaut
       zed-editor
       mekuteriya
       libreoffice
