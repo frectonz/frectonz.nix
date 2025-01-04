@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 let
   vim-rescript = pkgs.vimUtils.buildVimPlugin {
     name = "vim-rescript";
@@ -40,7 +40,7 @@ in
       # vimPlugins.vim-parinfer
 
       vimPlugins.tokyonight-nvim
-      config.nur.repos.m15a.vimExtraPlugins.vim-moonfly-colors
+      pkgs.nur.repos.m15a.vimExtraPlugins.vim-moonfly-colors
 
       vimPlugins.gitsigns-nvim
       vimPlugins.autoclose-nvim

@@ -23,7 +23,7 @@
 
     ./dotfiles.nix
 
-    inputs.nur.hmModules.nur
+    inputs.nur.modules.homeManager.default
   ];
 
   nixpkgs = {
