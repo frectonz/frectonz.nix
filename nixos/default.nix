@@ -10,6 +10,7 @@
     ./sound.nix
     ./nvidia.nix
     ./hardware.nix
+    ./tailscale.nix
 
     # ./games.nix
     # ./nomad.nix
