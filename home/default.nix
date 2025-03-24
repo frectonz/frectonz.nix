@@ -55,10 +55,8 @@
       ffmpeg
       bottom
       ranger
-      postman
       neofetch
       diskonaut
-      zed-editor
       mekuteriya
       libreoffice
       imagemagick
