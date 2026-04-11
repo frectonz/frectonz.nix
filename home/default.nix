@@ -9,7 +9,6 @@
     ./gh.nix
     ./gpg.nix
     ./git.nix
-    ./nvim.nix
     ./pass.nix
     ./fish.nix
     ./helix.nix
