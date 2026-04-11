@@ -89,13 +89,13 @@
             outputs.overlays.additions
             outputs.overlays.modifications
             outputs.overlays.unstable-packages
+            inputs.nur.overlays.default
           ];
           config = {
             allowUnfree = true;
           };
         };
 
-        system = "aarch64-linux";
         specialArgs = { inherit inputs outputs; };
         modules = [
           ./nixos

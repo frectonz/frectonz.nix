@@ -12,8 +12,6 @@
     ./fish.nix
     ./helix.nix
     ./starship.nix
-
-    inputs.nur.modules.homeManager.default
   ];
 
   home = {
