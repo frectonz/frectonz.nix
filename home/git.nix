@@ -1,15 +1,13 @@
 {
-  pkgs,
-  lib,
   config,
   ...
 }:
 {
   programs.git = {
     enable = true;
-    userName = "frectonz";
-    userEmail = "fraol0912@gmail.com";
-    extraConfig = {
+    user.name = "frectonz";
+    user.email = "fraol0912@gmail.com";
+    settings = {
       init.defaultBranch = "main";
       user.signing.key = "9CFA458945B7094F";
       commit.gpgSign = true;

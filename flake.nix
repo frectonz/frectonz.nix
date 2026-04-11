@@ -82,6 +82,19 @@
       homeManagerModules = import ./modules/home;
 
       nixosConfigurations.newton = nixpkgs.lib.nixosSystem {
+
+        pkgs = import nixpkgs {
+          system = "aarch64-darwin";
+          overlays = [
+            outputs.overlays.additions
+            outputs.overlays.modifications
+            outputs.overlays.unstable-packages
+          ];
+          config = {
+            allowUnfree = true;
+          };
+        };
+
         system = "aarch64-linux";
         specialArgs = { inherit inputs outputs; };
         modules = [
