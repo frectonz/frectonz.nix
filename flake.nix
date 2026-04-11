@@ -89,6 +89,7 @@
           home-manager.nixosModules.home-manager
           {
             home-manager.sharedModules = [ ];
+            home-manager.extraSpecialArgs = { inherit inputs outputs; };
 
             home-manager.useGlobalPkgs = true;
             home-manager.users.frectonz = import ./home;
