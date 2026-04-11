@@ -81,20 +81,6 @@
 
   programs.fish.enable = true;
 
-  fonts = {
-    packages = with pkgs; [
-      monaspace
-      noto-fonts
-      noto-fonts-emoji
-      nerd-fonts.fira-code
-    ];
-    fontconfig = {
-      defaultFonts = {
-        monospace = [ "Fira Code Nerd Font" ];
-      };
-    };
-  };
-
   programs.command-not-found.enable = false;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
