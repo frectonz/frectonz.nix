@@ -8,6 +8,7 @@
 }:
 {
   imports = [
+    ./hardware.nix
   ];
 
   nixpkgs = {
