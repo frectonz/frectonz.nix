@@ -4,24 +4,14 @@
 , ...
 }: {
   imports = [
-    ./nvim.nix
-
-    ./gtk.nix
-
     ./gh.nix
     ./gpg.nix
     ./git.nix
+    ./nvim.nix
     ./pass.nix
     ./fish.nix
     ./helix.nix
-    ./zathura.nix
     ./starship.nix
-
-    ./players.nix
-    ./browsers.nix
-    ./terminals.nix
-
-    ./dotfiles.nix
 
     inputs.nur.modules.homeManager.default
   ];
@@ -35,7 +25,6 @@
     config = {
       allowUnfree = true;
       allowUnfreePredicate = _: true;
-      pulseaudio = true;
     };
   };
 
@@ -56,14 +45,8 @@
       bottom
       ranger
       neofetch
-      diskonaut
       mekuteriya
-      libreoffice
       imagemagick
-      cool-retro-term
-      telegram-desktop
-      gnome-disk-utility
-      transmission_4-gtk
 
       inputs.tuime.defaultPackage.${pkgs.system}
       inputs.lobste-rs.packages.${pkgs.system}.bin
@@ -76,7 +59,6 @@
 
   programs.htop.enable = true;
   programs.home-manager.enable = true;
-  programs.obs-studio.enable = true;
 
   programs.atuin = {
     enable = true;
@@ -88,11 +70,9 @@
     nix-direnv.enable = true;
   };
 
-  xdg.mimeApps.enable = true;
-
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  home.stateVersion = "24.05";
+  home.stateVersion = "25.11";
 }

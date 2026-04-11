@@ -6,16 +6,6 @@
 , ...
 }: {
   imports = [
-    ./i3.nix
-    ./sound.nix
-    ./nvidia.nix
-    ./hardware.nix
-    ./tailscale.nix
-
-    # ./games.nix
-    # ./nomad.nix
-    # ./hyprland.nix
-    # ./databases.nix
   ];
 
   nixpkgs = {
@@ -26,7 +16,6 @@
     ];
     config = {
       allowUnfree = true;
-      pulseaudio = true;
     };
   };
 
@@ -47,10 +36,6 @@
         trusted-users = root frectonz
       '';
     };
-
-  #boot.kernelPackages = pkgs.linuxPackages_latest;
-  #boot.kernelModules = [ "v4l2loopback" ];
-  #boot.extraModulePackages = [ pkgs.linuxPackages_latest.v4l2loopback ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -84,25 +69,11 @@
       isNormalUser = true;
       shell = pkgs.fish;
       description = "frectonz";
-      extraGroups = [ "networkmanager" "wheel" "video" "audio" "wireshark" "docker" "libvirtd" ];
+      extraGroups = [ "networkmanager" "wheel" ];
     };
   };
 
   programs.fish.enable = true;
-  programs.light.enable = true;
-
-  programs.thunar = {
-    enable = true;
-    plugins = with pkgs.xfce; [
-      thunar-volman
-      thunar-archive-plugin
-      thunar-media-tags-plugin
-    ];
-  };
-  services.gvfs.enable = true; # Mount, trash, and other functionalities
-  services.tumbler.enable = true; # Thumbnail support for images
-
-  virtualisation.docker.enable = true;
 
   fonts = {
     packages = with pkgs; [
@@ -118,34 +89,8 @@
     };
   };
 
-  swapDevices = [{
-    device = "/var/lib/swapfile";
-    size = 16 * 1024;
-  }];
-
-  fileSystems."/home/frectonz/Data" = {
-    device = "/dev/disk/by-label/hdd";
-    fsType = "btrfs";
-  };
-
-  services.jellyfin = {
-    enable = true;
-    openFirewall = true;
-    user = "frectonz";
-  };
-
   programs.command-not-found.enable = false;
 
-  #virtualisation.libvirtd.enable = true;
-  #programs.virt-manager.enable = true;
-
-  #virtualisation.vmware.host.enable = true;
-
-  #services.ollama = {
-  #  enable = true;
-  #  acceleration = "cuda";
-  #};
-
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  system.stateVersion = "24.05";
+  system.stateVersion = "25.11";
 }
