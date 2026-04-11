@@ -17,18 +17,6 @@
     inputs.nur.modules.homeManager.default
   ];
 
-  nixpkgs = {
-    overlays = [
-      outputs.overlays.additions
-      outputs.overlays.modifications
-      outputs.overlays.unstable-packages
-    ];
-    config = {
-      allowUnfree = true;
-      allowUnfreePredicate = _: true;
-    };
-  };
-
   home = {
     username = "frectonz";
     homeDirectory = "/home/frectonz";
