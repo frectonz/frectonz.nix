@@ -84,7 +84,7 @@
       nixosConfigurations.newton = nixpkgs.lib.nixosSystem {
 
         pkgs = import nixpkgs {
-          system = "aarch64-darwin";
+          system = "aarch64-linux";
           overlays = [
             outputs.overlays.additions
             outputs.overlays.modifications
