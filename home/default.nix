@@ -1,8 +1,10 @@
-{ inputs
-, outputs
-, pkgs
-, ...
-}: {
+{
+  inputs,
+  outputs,
+  pkgs,
+  ...
+}:
+{
   imports = [
     ./gh.nix
     ./gpg.nix

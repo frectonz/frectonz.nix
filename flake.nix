@@ -52,20 +52,27 @@
   };
 
   outputs =
-    { self
-    , nixpkgs
-    , home-manager
-    , ...
-    } @ inputs:
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
     let
       inherit (self) outputs;
-      systems = [ "aarch64-linux" "aarch64-darwin"];
+      systems = [
+        "aarch64-linux"
+        "aarch64-darwin"
+      ];
       lib = nixpkgs.lib // home-manager.lib;
       forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
-      pkgsFor = lib.genAttrs systems (system: import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      });
+      pkgsFor = lib.genAttrs systems (
+        system:
+        import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        }
+      );
     in
     {
       packages = forEachSystem (pkgs: import ./pkgs { inherit pkgs; });
@@ -74,7 +81,7 @@
       nixosModules = import ./modules/nixos;
       homeManagerModules = import ./modules/home;
 
-      nixosConfigurations. newton = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.newton = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
         specialArgs = { inherit inputs outputs; };
         modules = [

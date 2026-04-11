@@ -1,4 +1,9 @@
-{ pkgs, lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 {
   programs.fish = {
     enable = true;
@@ -34,5 +39,12 @@
     };
   };
 
-  home.packages = with pkgs; [ workspace bat lazygit lsd ripgrep duf ];
+  home.packages = with pkgs; [
+    workspace
+    bat
+    lazygit
+    lsd
+    ripgrep
+    duf
+  ];
 }

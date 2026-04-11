@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   programs.helix = {
     enable = true;
     settings = {
@@ -19,7 +20,9 @@
         indent-guides.render = true;
       };
       keys.insert = {
-        j = { k = "normal_mode"; }; # Maps `jk` to exit insert mode
+        j = {
+          k = "normal_mode";
+        }; # Maps `jk` to exit insert mode
       };
     };
   };

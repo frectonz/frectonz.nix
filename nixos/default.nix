@@ -1,10 +1,12 @@
-{ inputs
-, outputs
-, lib
-, config
-, pkgs
-, ...
-}: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   imports = [
   ];
 
@@ -69,7 +71,10 @@
       isNormalUser = true;
       shell = pkgs.fish;
       description = "frectonz";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+      ];
     };
   };
 
