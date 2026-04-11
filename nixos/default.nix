@@ -1,5 +1,6 @@
 {
   inputs,
+  self,
   lib,
   config,
   pkgs,
@@ -8,6 +9,7 @@
 {
   imports = [
     ./hardware.nix
+    ../modules/nixos/openssh.nix
   ];
 
   nix =
@@ -34,7 +36,7 @@
   networking.hostName = "newton";
   networking.networkmanager.enable = true;
   networking.firewall.enable = true;
-  networking.firewall.allowedTCPPorts = [ 8081 ];
+  networking.firewall.allowedTCPPorts = [ 22 ];
 
   time.timeZone = "Africa/Addis_Ababa";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -63,6 +65,9 @@
       extraGroups = [
         "networkmanager"
         "wheel"
+      ];
+      openssh.authorizedKeys.keyFiles = [
+        "${self}/users/frectonz/authorized_keys"
       ];
     };
   };

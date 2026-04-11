@@ -58,7 +58,7 @@
           };
         };
 
-        specialArgs = { inherit inputs outputs; };
+        specialArgs = { inherit inputs outputs self; };
         modules = [
           ./nixos
           home-manager.nixosModules.home-manager
