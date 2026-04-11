@@ -33,7 +33,7 @@
       ffmpeg
       bottom
       ranger
-      neofetch
+      fastfetch
       mekuteriya
       imagemagick
 
