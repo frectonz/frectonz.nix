@@ -2,7 +2,7 @@
   description = "frectonz's nix config";
 
   inputs = {
-    stable.url = "github:nixos/nixpkgs/nixos-24.05";
+    stable.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nur.url = "github:nix-community/NUR";
@@ -59,7 +59,7 @@
     } @ inputs:
     let
       inherit (self) outputs;
-      systems = [ "x86_64-linux" ];
+      systems = [ "aarch64-linux" "aarch64-darwin"];
       lib = nixpkgs.lib // home-manager.lib;
       forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
       pkgsFor = lib.genAttrs systems (system: import nixpkgs {
@@ -69,25 +69,43 @@
     in
     {
       packages = forEachSystem (pkgs: import ./pkgs { inherit pkgs; });
-      formatter = forEachSystem (pkgs: pkgs.nixpkgs-fmt);
 
       overlays = import ./overlays { inherit inputs; };
       nixosModules = import ./modules/nixos;
       homeManagerModules = import ./modules/home;
 
-      nixosConfigurations = {
-        newton = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
-          modules = [ ./nixos ];
-        };
+      nixosConfigurations. newton = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
+        specialArgs = { inherit inputs outputs; };
+        modules = [
+          ./nixos
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.sharedModules = [ ];
+
+            home-manager.useGlobalPkgs = true;
+            home-manager.users.frectonz = import ./home;
+            home-manager.backupCommand = "echo";
+          }
+        ];
       };
 
-      homeConfigurations = {
-        "frectonz@newton" = home-manager.lib.homeManagerConfiguration {
-          pkgs = pkgsFor.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./home ];
-        };
-      };
+      formatter = forEachSystem (
+        pkgs:
+        pkgs.treefmt.withConfig {
+          runtimeInputs = [ pkgs.nixfmt-rfc-style ];
+
+          settings = {
+            # Log level for files treefmt won't format
+            on-unmatched = "info";
+
+            # Configure nixfmt for .nix files
+            formatter.nixfmt = {
+              command = "nixfmt";
+              includes = [ "*.nix" ];
+            };
+          };
+        }
+      );
     };
 }
