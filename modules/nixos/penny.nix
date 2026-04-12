@@ -25,5 +25,8 @@
     };
   };
 
-  networking.firewall.allowedTCPPorts = [ 80 3031 ];
+  networking.firewall.allowedTCPPorts = [
+    80
+    3031
+  ];
 }
