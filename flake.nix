@@ -11,6 +11,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    penny = {
+      url = "github:frectonz/penny";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -52,6 +57,7 @@
             outputs.overlays.modifications
             outputs.overlays.unstable-packages
             inputs.nur.overlays.default
+            inputs.penny.overlays.default
           ];
           config = {
             allowUnfree = true;
@@ -61,6 +67,7 @@
         specialArgs = { inherit inputs outputs self; };
         modules = [
           ./nixos
+          inputs.penny.nixosModules.penny
           home-manager.nixosModules.home-manager
           {
             home-manager.sharedModules = [ ];

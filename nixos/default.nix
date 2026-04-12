@@ -10,6 +10,7 @@
   imports = [
     ./hardware.nix
     ../modules/nixos/openssh.nix
+    ../modules/nixos/penny.nix
   ];
 
   nix =
