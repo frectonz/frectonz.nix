@@ -7,7 +7,7 @@
     enable = true;
     package = pkgs.penny;
     settings = {
-      api_address = "127.0.0.1:3031";
+      api_address = "0.0.0.0:3031";
 
       "app1.example.com" = {
         address = "127.0.0.1:3001";
