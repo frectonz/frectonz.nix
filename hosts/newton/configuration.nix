@@ -1,6 +1,6 @@
 {
-  inputs,
-  self,
+  flake,
+  perSystem,
   lib,
   config,
   pkgs,
@@ -9,13 +9,21 @@
 {
   imports = [
     ./hardware.nix
-    ../modules/nixos/openssh.nix
-    ../modules/nixos/penny.nix
+    flake.nixosModules.openssh
+    flake.nixosModules.penny
+    flake.inputs.penny.nixosModules.penny
+    flake.inputs.home-manager.nixosModules.home-manager
+  ];
+
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.overlays = [
+    (_final: _prev: { inherit (perSystem.self) workspace; })
+    flake.inputs.penny.overlays.default
   ];
 
   nix =
     let
-      flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
+      flakeInputs = lib.filterAttrs (_: lib.isType "flake") flake.inputs;
     in
     {
       settings = {
@@ -24,7 +32,7 @@
         nix-path = config.nix.nixPath;
       };
       channel.enable = false;
-      registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
+      registry = lib.mapAttrs (_: f: { flake = f; }) flakeInputs;
       nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
       extraOptions = ''
         trusted-users = root frectonz
@@ -68,7 +76,7 @@
         "wheel"
       ];
       openssh.authorizedKeys.keyFiles = [
-        "${self}/users/frectonz/authorized_keys"
+        "${flake}/users/frectonz/authorized_keys"
       ];
     };
   };
@@ -76,8 +84,14 @@
   environment.systemPackages = [ pkgs.ghostty.terminfo ];
 
   programs.fish.enable = true;
-
   programs.command-not-found.enable = false;
+
+  home-manager = {
+    useGlobalPkgs = true;
+    backupCommand = "echo";
+    sharedModules = [ ];
+    users.frectonz = import "${flake}/home";
+  };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "25.11";
