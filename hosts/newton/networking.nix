@@ -1,4 +1,3 @@
-{ ... }:
 {
   networking.hostName = "newton";
   networking.networkmanager.enable = true;

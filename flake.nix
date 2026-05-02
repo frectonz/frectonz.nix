@@ -10,6 +10,9 @@
   inputs.penny.url = "github:frectonz/penny";
   inputs.penny.inputs.nixpkgs.follows = "nixpkgs";
 
+  inputs.nix-index-database.url = "github:nix-community/nix-index-database";
+  inputs.nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+
   inputs.blueprint.url = "github:numtide/blueprint";
   inputs.blueprint.inputs.nixpkgs.follows = "nixpkgs";
 

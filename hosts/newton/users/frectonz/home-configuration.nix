@@ -4,12 +4,14 @@
 }:
 {
   imports = [
-    ./gh.nix
-    ./gpg.nix
-    ./git.nix
-    ./pass.nix
     ./fish.nix
+    ./gh.nix
+    ./git.nix
+    ./gpg.nix
     ./helix.nix
+    ./nh.nix
+    ./nix-index.nix
+    ./pass.nix
     ./starship.nix
   ];
 
