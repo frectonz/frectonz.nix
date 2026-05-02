@@ -1,98 +1,22 @@
-{
-  flake,
-  perSystem,
-  lib,
-  config,
-  pkgs,
-  ...
-}:
+{ flake, pkgs, ... }:
 {
   imports = [
+    ./boot.nix
     ./hardware.nix
+    ./home-manager.nix
+    ./locale.nix
+    ./networking.nix
+    ./nix.nix
+    ./nixpkgs.nix
+    ./user.nix
     flake.nixosModules.openssh
     flake.nixosModules.penny
     flake.inputs.penny.nixosModules.penny
-    flake.inputs.home-manager.nixosModules.home-manager
   ];
-
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.overlays = [
-    (_final: _prev: { inherit (perSystem.self) workspace; })
-    flake.inputs.penny.overlays.default
-  ];
-
-  nix =
-    let
-      flakeInputs = lib.filterAttrs (_: lib.isType "flake") flake.inputs;
-    in
-    {
-      settings = {
-        experimental-features = "nix-command flakes";
-        flake-registry = "";
-        nix-path = config.nix.nixPath;
-      };
-      channel.enable = false;
-      registry = lib.mapAttrs (_: f: { flake = f; }) flakeInputs;
-      nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
-      extraOptions = ''
-        trusted-users = root frectonz
-      '';
-    };
-
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  networking.hostName = "newton";
-  networking.networkmanager.enable = true;
-  networking.firewall.enable = true;
-  networking.firewall.allowedTCPPorts = [ 22 ];
-
-  time.timeZone = "Africa/Addis_Ababa";
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.inputMethod = {
-    enable = true;
-    type = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [ m17n ];
-  };
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
-
-  users.users = {
-    frectonz = {
-      isNormalUser = true;
-      shell = pkgs.fish;
-      description = "frectonz";
-      extraGroups = [
-        "networkmanager"
-        "wheel"
-      ];
-      openssh.authorizedKeys.keyFiles = [
-        "${flake}/users/frectonz/authorized_keys"
-      ];
-    };
-  };
 
   environment.systemPackages = [ pkgs.ghostty.terminfo ];
-
-  programs.fish.enable = true;
   programs.command-not-found.enable = false;
 
-  home-manager = {
-    useGlobalPkgs = true;
-    backupCommand = "echo";
-    sharedModules = [ ];
-    users.frectonz = import "${flake}/home";
-  };
-
-  # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "25.11";
+  system.configurationRevision = flake.rev or flake.dirtyRev or null;
 }

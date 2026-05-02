@@ -13,27 +13,23 @@
     ./starship.nix
   ];
 
-  home = {
-    username = "frectonz";
-    homeDirectory = "/home/frectonz";
-    packages = with pkgs; [
-      fd
-      feh
-      nil
-      zip
-      nixd
-      dive
-      unzip
-      unrar
-      devenv
-      ffmpeg
-      bottom
-      ranger
-      fastfetch
-      mekuteriya
-      imagemagick
-    ];
-  };
+  home.packages = with pkgs; [
+    fd
+    feh
+    nil
+    zip
+    nixd
+    dive
+    unzip
+    unrar
+    devenv
+    ffmpeg
+    bottom
+    ranger
+    fastfetch
+    mekuteriya
+    imagemagick
+  ];
 
   programs.htop.enable = true;
   programs.home-manager.enable = true;
