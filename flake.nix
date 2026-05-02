@@ -2,7 +2,6 @@
   description = "frectonz's nix config";
 
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-  inputs.stable.url = "github:nixos/nixpkgs/nixos-25.11";
 
   inputs.home-manager.url = "github:nix-community/home-manager";
   inputs.home-manager.inputs.nixpkgs.follows = "nixpkgs";
